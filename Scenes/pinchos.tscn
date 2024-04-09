@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bykcia20b0wkd"]
+
+[ext_resource type="Texture2D" uid="uid://bdh6h55lwp3so" path="res://Sprites/Escenario/pinchos.png" id="1_vwbft"]
+
+[node name="Pinchos" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(23.25, 195.018)
+scale = Vector2(5.48438, 3.75113)
+texture = ExtResource("1_vwbft")

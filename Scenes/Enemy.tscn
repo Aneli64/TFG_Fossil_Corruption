@@ -1,0 +1,85 @@
+[gd_scene load_steps=14 format=3 uid="uid://duxrb47qwrxwl"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_1pwhk"]
+[ext_resource type="Texture2D" uid="uid://b6gk1uydpd2p5" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk1.png" id="2_oscgq"]
+[ext_resource type="Texture2D" uid="uid://cu2kqr3xqawuu" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk2.png" id="3_ey3p8"]
+[ext_resource type="Texture2D" uid="uid://bih58mf3uugmi" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk3.png" id="4_fq3vo"]
+[ext_resource type="Texture2D" uid="uid://c1jdl4hfeopgp" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk4.png" id="5_t0nbh"]
+[ext_resource type="Texture2D" uid="uid://bcv5wl48w6qru" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk5.png" id="6_lsyhb"]
+[ext_resource type="Texture2D" uid="uid://bby8ibp1sliug" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Walk6.png" id="7_awc5q"]
+[ext_resource type="Texture2D" uid="uid://8tneqy3n7a2w" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Hurt1.png" id="8_eru60"]
+[ext_resource type="Texture2D" uid="uid://bhqsmfl4gy7g4" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Hurt2.png" id="9_2d2l0"]
+[ext_resource type="Texture2D" uid="uid://6uutojeruofv" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Hurt3.png" id="10_7ftuf"]
+[ext_resource type="Texture2D" uid="uid://dv0g7hah38d8c" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Hurt4.png" id="11_tb0aa"]
+[ext_resource type="Texture2D" uid="uid://dwflocomq41h2" path="res://Sprites/Enemy/2D-Zombie-Free-Sprite/Zombie2/animation/Hurt5.png" id="12_arskm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m6woq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oscgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ey3p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fq3vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_t0nbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lsyhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_awc5q")
+}],
+"loop": true,
+"name": &"caminar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_eru60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2d2l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7ftuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tb0aa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_arskm")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_1pwhk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-55.3333, -40, -57.3333, -30.6667, -55.3333, -23.3333, -52.6667, -16, -49.3333, -13.3333, -52, -6, -55.3333, -0.666667, -56, 5.33333, -51.3333, 6.66667, -50, 12.6667, -51.3333, 19.3333, -50.6667, 27.3333, -50.6667, 34.6667, -50, 42.6667, -48, 44.6667, -38, 46, -29.3333, 45.3333, -31.3333, 40.6667, -38, 38.6667, -39.3333, 32.6667, -38, 24.6667, -36.6667, 18.6667, -32.6667, 26.6667, -30, 34.6667, -28, 41.3333, -21.3333, 43.3333, -12.6667, 44, -14.6667, 39.3333, -21.3333, 37.3333, -23.3333, 31.3333, -22.6667, 24, -22.6667, 17.3333, -24.6667, 9.33333, -22, -0.666667, -17.3333, 6.66667, -16, 16, -18.6667, 20.6667, -16, 24, -12.6667, 24, -9.33333, 21.3333, -11.3333, 14.6667, -13.3333, -2, -22, -14, -16.6667, -22, -16, -30.6667, -17.3333, -37.3333, -25.3333, -45.3333, -39.3333, -48, -48, -46)
+
+[node name="MovementSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-33, -2)
+scale = Vector2(0.290389, 0.253623)
+sprite_frames = SubResource("SpriteFrames_m6woq")
+animation = &"caminar"
+
+[node name="FloorRay" type="RayCast2D" parent="MovementSprite"]
+position = Vector2(113.641, 7.88572)
+scale = Vector2(3.44366, 3.94286)
+
+[node name="RightRay" type="RayCast2D" parent="."]
+position = Vector2(-35.3333, 0)
+target_position = Vector2(50, 0)
+
+[node name="LeftRay" type="RayCast2D" parent="."]
+position = Vector2(-35.3333, 0)
+target_position = Vector2(-50, 0)

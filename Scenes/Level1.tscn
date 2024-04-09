@@ -1,0 +1,246 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6o730161onhl"]
+
+[ext_resource type="PackedScene" uid="uid://7q4fn2drwggt" path="res://Scenes/Monticulo1.tscn" id="2_7n4ws"]
+[ext_resource type="PackedScene" uid="uid://bykcia20b0wkd" path="res://Scenes/pinchos.tscn" id="2_6475x"]
+[ext_resource type="PackedScene" uid="uid://cmqnhm7yi2l53" path="res://Scenes/pared1.tscn" id="3_4qw4q"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Monticulo1" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(20, 7)
+
+[node name="Monticulo1_1" parent="Monticulo1" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo1_2" parent="Monticulo1/Monticulo1_1" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo1_3" parent="Monticulo1/Monticulo1_1/Monticulo1_2" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo1/StaticBody2D"]
+polygon = PackedVector2Array(189, 33, 187, 113, 173, 128, 157, 138, 144, 149, 126, 163, -1162, 163, -1180, 153, -1195, 139, -1210, 126, -1229, 116, -1229, 40)
+
+[node name="Monticulo2" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(2861, 6)
+
+[node name="Monticulo2_1" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+position = Vector2(-321, 0)
+
+[node name="Monticulo2_3" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+position = Vector2(315, 0)
+
+[node name="Monticulo2_2" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+position = Vector2(601, 0)
+
+[node name="Monticulo2_4" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+position = Vector2(902, 0)
+
+[node name="Monticulo2_5" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+position = Vector2(1112, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo2/StaticBody2D"]
+position = Vector2(504.163, 0)
+scale = Vector2(1.26809, 1)
+polygon = PackedVector2Array(-1612.01, 35, -1613.58, 111, -1582.83, 143, -1563.11, 164, -1517.38, 165, -1448.77, 162, -842, 163, -419.658, 163, -183.87, 169, -181.504, 138, -181.504, 95, -181.504, 38)
+
+[node name="Monticulo3" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(0, 527)
+
+[node name="Monticulo3_1" parent="Monticulo3" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo3_2" parent="Monticulo3/Monticulo3_1" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo3_3" parent="Monticulo3/Monticulo3_1/Monticulo3_2" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo3/StaticBody2D"]
+polygon = PackedVector2Array(189, 33, 187, 113, 173, 128, 157, 138, 144, 149, 126, 163, -1162, 163, -1180, 153, -1195, 139, -1210, 126, -1229, 116, -1229, 40)
+
+[node name="Monticulo4" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(2941, 516)
+
+[node name="Monticulo4_1" parent="Monticulo4" instance=ExtResource("2_7n4ws")]
+position = Vector2(-321, 0)
+
+[node name="Monticulo4_2" parent="Monticulo4" instance=ExtResource("2_7n4ws")]
+position = Vector2(315, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo4/StaticBody2D"]
+polygon = PackedVector2Array(-1549, 40, -1548, 111, -1531, 124, -1514, 138, -1499, 150, -1483, 164, -842, 163, -522, 165, -511, 152, -495, 135, -466, 116, -464, 38)
+
+[node name="Monticulo5" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(1681, 621)
+
+[node name="Monticulo5_1" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+position = Vector2(-321, 0)
+
+[node name="Monticulo5_2" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+position = Vector2(302, 0)
+
+[node name="Monticulo5_3" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+position = Vector2(576, 0)
+
+[node name="StaticBodyMonticulo2" type="StaticBody2D" parent="Monticulo5"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo5/StaticBodyMonticulo2"]
+polygon = PackedVector2Array(-1553, 30, -1548, 111, -1531, 124, -1514, 138, -1499, 150, -1483, 164, -842, 163, -263, 165, -243, 149, -226, 130, -204, 109, -202, 26)
+
+[node name="PlataformaMov1" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(1958, 262)
+
+[node name="Monticulo6_1" parent="PlataformaMov1" instance=ExtResource("2_7n4ws")]
+position = Vector2(-321, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlataformaMov1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlataformaMov1/StaticBody2D"]
+polygon = PackedVector2Array(-1549, 40, -1548, 111, -1531, 124, -1514, 138, -1499, 150, -1483, 164, -842, 163, -825, 150, -809, 136, -792, 124, -777, 114, -777, 36)
+
+[node name="PlataformaMov2" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(3770, 831)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="PlataformaMov2"]
+position = Vector2(326, -12)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlataformaMov2/StaticBody2D"]
+polygon = PackedVector2Array(-1549, 51, -1548, 111, -1531, 124, -1514, 138, -1499, 150, -1483, 164, -1327, 170, -1165, 172, -1139, 161, -1112, 136, -1114, 105, -1105, 49)
+
+[node name="Monticulo6" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(496, 1140)
+
+[node name="Monticulo6_1" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo6_2" parent="Monticulo6/Monticulo6_1" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo6_3" parent="Monticulo6/Monticulo6_1/Monticulo6_2" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo6_3" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+position = Vector2(1282, 0)
+
+[node name="Monticulo6_4" parent="Monticulo6/Monticulo6_3" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo8_2" parent="Monticulo6/Monticulo6_3/Monticulo6_4" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="Monticulo8_3" parent="Monticulo6/Monticulo6_3/Monticulo6_4/Monticulo8_2" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo6/Monticulo6_3"]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo6/Monticulo6_3/StaticBody2D"]
+polygon = PackedVector2Array(189, 33, 187, 113, 173, 128, 157, 138, 144, 149, 126, 163, -1162, 163, -1180, 153, -1195, 139, -1210, 126, -1229, 116, -1229, 40)
+
+[node name="Monticulo6_5" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+position = Vector2(2409, 0)
+
+[node name="Monticulo6_6" parent="Monticulo6/Monticulo6_5" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo6"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo6/StaticBody2D"]
+polygon = PackedVector2Array(-1227, 44, -1223, 112, -1195, 133, -1164, 161, 1941, 150, 1941, 36)
+
+[node name="Monticulo7" parent="." instance=ExtResource("2_7n4ws")]
+position = Vector2(3587, 1201)
+
+[node name="Monticulo7_1" parent="Monticulo7" instance=ExtResource("2_7n4ws")]
+position = Vector2(322, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Monticulo7"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo7/StaticBody2D"]
+polygon = PackedVector2Array(-454, 17, -460, 96, -475, 136, -498, 151, -520, 170, -792, 161, -1162, 163, -1180, 153, -1195, 139, -1210, 126, -1229, 116, -1226, 15)
+
+[node name="Grupo_Pinchos" parent="." instance=ExtResource("2_6475x")]
+position = Vector2(252, 402)
+
+[node name="Pinchos" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(162, 0)
+
+[node name="Pinchos2" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(162, 0)
+
+[node name="Pinchos3" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(324, -1)
+
+[node name="Pinchos4" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(484, -1)
+
+[node name="Pinchos5" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(643, -1)
+
+[node name="Pinchos6" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(800, -1)
+
+[node name="Pinchos7" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(959, -1)
+
+[node name="Pinchos8" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+position = Vector2(1070, -1)
+
+[node name="Grupo_Pinchos2" parent="." instance=ExtResource("2_6475x")]
+position = Vector2(2507, 979)
+
+[node name="Pinchos" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+position = Vector2(162, 0)
+
+[node name="Pinchos2" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+position = Vector2(162, 0)
+
+[node name="Pinchos3" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+position = Vector2(324, -1)
+
+[node name="Pinchos4" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+position = Vector2(489, -1)
+
+[node name="ParedIzq" parent="." instance=ExtResource("3_4qw4q")]
+position = Vector2(-205, 469)
+
+[node name="Pared_01" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, -475)
+
+[node name="Pared_02" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, 491)
+
+[node name="Pared_03" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, 945)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParedIzq"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParedIzq/StaticBody2D"]
+polygon = PackedVector2Array(-991, -885, -982, 1107, -1048, 1041, -1045, -876, -976, -918)
+
+[node name="ParedIzq2" parent="." instance=ExtResource("3_4qw4q")]
+position = Vector2(2150, 659)
+rotation = 3.14159
+
+[node name="Pared_01" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, -475)
+
+[node name="Pared_02" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, 491)
+
+[node name="Pared_03" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+position = Vector2(0, 945)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParedIzq2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParedIzq2/StaticBody2D"]
+polygon = PackedVector2Array(-991, -885, -982, 1107, -1048, 1041, -1045, -876, -976, -918)
