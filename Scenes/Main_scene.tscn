@@ -34,10 +34,10 @@ scale = Vector2(13374.3, 7087.16)
 mesh = SubResource("BoxMesh_nea6w")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-1127, 274)
+position = Vector2(-1508, 238)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("3_ppdme")]
-position = Vector2(-813, 271)
+position = Vector2(-1238, 243)
 
 [node name="Level1" parent="." instance=ExtResource("2_v674p")]
 position = Vector2(-777, 394)
