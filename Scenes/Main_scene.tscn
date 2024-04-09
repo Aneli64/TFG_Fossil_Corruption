@@ -13,7 +13,6 @@ var camera = Camera2D
 func _ready():
 	# Encuentra el nodo del personaje y almacena una referencia a él
 	player = get_node(\"CharacterBody2D\")
-	camera = get_node(\"Camera2D\")
 	
 func _process(delta):
 	# Verifica si se ha establecido una referencia al nodo del personaje
