@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var boolRayCastLeft = false
+var boolRayCastRight = false
 var raycast_left: RayCast2D
 var raycast_right: RayCast2D
 var raycast_forward: RayCast2D
@@ -18,30 +20,29 @@ func _ready():
 	raycast_right = $RightRay
 	raycast_forward = $RayCastForward
 
-func _left_collision() -> bool:
-	return raycast_left.is_colliding()
-func _right_collision() -> bool:
-	return raycast_right.is_colliding()
-
-
 func _physics_process(delta):
-	# Add the gravity.
+	
+	if raycast_left.is_colliding():
+		boolRayCastLeft = true
+		boolRayCastRight = false
+		
+	if raycast_right.is_colliding():
+		boolRayCastRight = true
+		boolRayCastLeft = false
+		
+	# Movimiento
+	velocity.x = -SPEED
+	
+	# Gravedad
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		
-	var move_dir = Vector2.ZERO
 	
-	if _left_collision():
-		print("colision izq")
-		move_dir.x = 1
-	else:
-		move_dir.x = -1
-	if _right_collision():
-		print("colision derech")
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	else:
-		#move_dir.x = 1
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	position += move_dir.normalized() * SPEED * delta
+	if boolRayCastLeft:
+		#movementSprite.flip_h = true
+		velocity.x = SPEED
+	
+	if boolRayCastRight:
+		velocity.x = -SPEED
+		
+	
 	move_and_slide()
