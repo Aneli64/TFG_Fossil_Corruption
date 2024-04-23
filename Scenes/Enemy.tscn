@@ -73,7 +73,7 @@ sprite_frames = SubResource("SpriteFrames_m6woq")
 animation = &"caminar"
 
 [node name="FloorRay" type="RayCast2D" parent="MovementSprite"]
-position = Vector2(113.641, 7.88572)
+position = Vector2(148.077, 7.88572)
 scale = Vector2(3.44366, 3.94286)
 
 [node name="RightRay" type="RayCast2D" parent="."]
