@@ -29,15 +29,15 @@ script = SubResource("GDScript_tddbd")
 
 [node name="fondo" type="MeshInstance2D" parent="."]
 modulate = Color(0.207843, 0.192157, 0.0901961, 1)
-position = Vector2(1419, 1161)
+position = Vector2(1301, 1163)
 scale = Vector2(13374.3, 7087.16)
 mesh = SubResource("BoxMesh_nea6w")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-114, 535)
+position = Vector2(-178, 571)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("3_ppdme")]
-position = Vector2(75, 582)
+position = Vector2(189, 621)
 
 [node name="Level1" parent="." instance=ExtResource("2_v674p")]
 position = Vector2(-777, 394)
