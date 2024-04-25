@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://djv7k3fcpm8la"]
+[gd_scene load_steps=7 format=3 uid="uid://djv7k3fcpm8la"]
 
 [ext_resource type="PackedScene" uid="uid://cwh207uoufol3" path="res://Scenes/Player.tscn" id="2_d5ui2"]
 [ext_resource type="PackedScene" uid="uid://c6o730161onhl" path="res://Scenes/Level1.tscn" id="2_v674p"]
 [ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Enemy.tscn" id="3_ppdme"]
+[ext_resource type="PackedScene" uid="uid://re684wl5yohx" path="res://Scenes/Coleccionable_1.tscn" id="4_7hief"]
 
 [sub_resource type="GDScript" id="GDScript_tddbd"]
 script/source = "extends Node2D
@@ -29,15 +30,24 @@ script = SubResource("GDScript_tddbd")
 
 [node name="fondo" type="MeshInstance2D" parent="."]
 modulate = Color(0.207843, 0.192157, 0.0901961, 1)
-position = Vector2(1301, 1163)
+position = Vector2(1834, 1441)
 scale = Vector2(13374.3, 7087.16)
 mesh = SubResource("BoxMesh_nea6w")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-178, 571)
+position = Vector2(-655, 321)
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("3_ppdme")]
-position = Vector2(189, 621)
+position = Vector2(-1554, 291)
 
 [node name="Level1" parent="." instance=ExtResource("2_v674p")]
 position = Vector2(-777, 394)
+
+[node name="Coleccionable1" parent="." instance=ExtResource("4_7hief")]
+position = Vector2(-81, 582)
+
+[node name="Coleccionable3" parent="." instance=ExtResource("4_7hief")]
+position = Vector2(-916, 340)
+
+[node name="Coleccionable2" parent="." instance=ExtResource("4_7hief")]
+position = Vector2(183, 578)

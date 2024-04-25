@@ -23,38 +23,18 @@ func _ready():
 	velocity.x = SPEED
 
 func colission():
-	if !raycast_down.is_colliding() && is_on_floor():
-		print("DENTRO")
-		if movementSprite.flip_h == false:
-			velocity.x = -SPEED
-			movementSprite.flip_h = true
-		else:
-			velocity.x = SPEED
-			movementSprite.flip_h = false
-	elif raycast_right.is_colliding():
-			print("derech")
+	if raycast_right.is_colliding() || !raycast_down.is_colliding() && !raycast_right.is_colliding():
 			movementSprite.flip_h = true
 			velocity.x = -SPEED
-	elif raycast_left.is_colliding():
-			print("izq")
+	elif raycast_left.is_colliding() || !raycast_down.is_colliding() && !raycast_left.is_colliding():
 			movementSprite.flip_h = false
 			velocity.x = SPEED
-	#else:
-		#print("fuera")
-		#if raycast_right.is_colliding():
-			#movementSprite.flip_h = true
-			#velocity.x = -SPEED
-		#if raycast_left.is_colliding():
-			#movementSprite.flip_h = false
-			#velocity.x = SPEED
-
+	
 func _physics_process(delta):
 	# Comprobamos colisiones de izquierda y derecha (y no permitimos que caiga )
 	colission()
 	# Controlamos la gravedad
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
-	
-	
+		
 	move_and_slide()

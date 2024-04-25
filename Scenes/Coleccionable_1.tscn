@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://re684wl5yohx"]
+
+[ext_resource type="Script" path="res://Scripts/Coleccionable_1.gd" id="1_oy3r6"]
+[ext_resource type="Texture2D" uid="uid://dvga5olq0otpx" path="res://Sprites/Escenario/esmeralda.png" id="1_ya27p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pqoqj"]
+radius = 26.0
+height = 100.0
+
+[node name="Coleccionable1" type="Node2D"]
+script = ExtResource("1_oy3r6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -10)
+shape = SubResource("CapsuleShape2D_pqoqj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture_filter = 3
+position = Vector2(2, -5)
+scale = Vector2(5, 3.95312)
+texture = ExtResource("1_ya27p")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
