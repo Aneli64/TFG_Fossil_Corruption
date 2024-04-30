@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# señar que nos mide cuando golpean a nuestro jugador
+signal hit
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -10,7 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	# Iniciamos el sprite de estado estatico una vez inicie el juego
 	movementSprite.play("parado")
-	
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,3 +34,7 @@ func _physics_process(delta):
 		movementSprite.play("parado")
 
 	move_and_slide()
+
+func _on_hit():
+	#queue_free()
+	print("GOLPE")

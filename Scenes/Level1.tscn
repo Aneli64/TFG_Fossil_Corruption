@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6o730161onhl"]
+[gd_scene load_steps=5 format=3 uid="uid://c6o730161onhl"]
 
 [ext_resource type="PackedScene" uid="uid://7q4fn2drwggt" path="res://Scenes/Monticulo1.tscn" id="2_7n4ws"]
 [ext_resource type="PackedScene" uid="uid://bykcia20b0wkd" path="res://Scenes/pinchos.tscn" id="2_6475x"]
 [ext_resource type="PackedScene" uid="uid://cmqnhm7yi2l53" path="res://Scenes/pared1.tscn" id="3_4qw4q"]
+[ext_resource type="PackedScene" uid="uid://re684wl5yohx" path="res://Scenes/Coleccionable_1.tscn" id="4_adhrj"]
 
 [node name="Level1" type="Node2D"]
 
@@ -244,3 +245,12 @@ position = Vector2(0, 945)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParedIzq2/StaticBody2D"]
 polygon = PackedVector2Array(-991, -885, -982, 1107, -1048, 1041, -1045, -876, -976, -918)
+
+[node name="Coleccionable1" parent="." instance=ExtResource("4_adhrj")]
+position = Vector2(671, 180)
+
+[node name="Coleccionable3" parent="." instance=ExtResource("4_adhrj")]
+position = Vector2(-164, -62)
+
+[node name="Coleccionable2" parent="." instance=ExtResource("4_adhrj")]
+position = Vector2(935, 176)
