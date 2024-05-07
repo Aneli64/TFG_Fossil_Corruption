@@ -5,14 +5,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	movementSprite.play("BasicMovement")
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 
 func _on_area_2d_body_entered(body):
+	#Cuando colisione con nuestra moneda un player, sumaremos la moneda a su
+	#puntuación y eliminaremos la moneda de la escena
 	if body.is_in_group("Player"):
+		body.points += 1
 		queue_free()

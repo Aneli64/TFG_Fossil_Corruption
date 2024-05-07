@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5p16fopwlgoh"
-path="res://.godot/imported/esmeralda.png-2c06a51381bef0d531611db0c2373d79.ctex"
+uid="uid://daakagau2vlv4"
+path="res://.godot/imported/esmeralda_2.png-76779f0f9c6d3945c23bab387602ddfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/esmeralda.png"
-dest_files=["res://.godot/imported/esmeralda.png-2c06a51381bef0d531611db0c2373d79.ctex"]
+source_file="res://Sprites/Escenario/esmeralda_2.png"
+dest_files=["res://.godot/imported/esmeralda_2.png-76779f0f9c6d3945c23bab387602ddfd.ctex"]
 
 [params]
 

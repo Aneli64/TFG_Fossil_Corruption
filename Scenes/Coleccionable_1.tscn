@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://re684wl5yohx"]
 
 [ext_resource type="Script" path="res://Scripts/Coleccionable_1.gd" id="1_oy3r6"]
-[ext_resource type="Texture2D" uid="uid://b5p16fopwlgoh" path="res://Scenes/esmeralda.png" id="3_n4pqo"]
-[ext_resource type="Texture2D" uid="uid://daakagau2vlv4" path="res://Scenes/esmeralda_2.png" id="4_alp42"]
+[ext_resource type="Texture2D" uid="uid://b5p16fopwlgoh" path="res://Sprites/Escenario/esmeralda.png" id="2_0cwkw"]
+[ext_resource type="Texture2D" uid="uid://daakagau2vlv4" path="res://Sprites/Escenario/esmeralda_2.png" id="3_i5lt4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pqoqj"]
 radius = 26.0
@@ -12,10 +12,10 @@ height = 100.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_n4pqo")
+"texture": ExtResource("2_0cwkw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_alp42")
+"texture": ExtResource("3_i5lt4")
 }],
 "loop": true,
 "name": &"BasicMovement",
