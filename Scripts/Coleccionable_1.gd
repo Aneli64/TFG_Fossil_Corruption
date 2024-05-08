@@ -9,6 +9,6 @@ func _ready():
 func _on_area_2d_body_entered(body):
 	#Cuando colisione con nuestra moneda un player, sumaremos la moneda a su
 	#puntuación y eliminaremos la moneda de la escena
-	if body.is_in_group("Player"):
-		body.points += 1
-		queue_free()
+	#if body.is_in_group("Player"):
+	body.points += 1
+	queue_free()

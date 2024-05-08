@@ -26,6 +26,7 @@ animations = [{
 script = ExtResource("1_oy3r6")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-4, -10)

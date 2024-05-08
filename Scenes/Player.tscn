@@ -137,6 +137,7 @@ animations = [{
 
 [node name="PlayerBody" type="CharacterBody2D" groups=["Player"]]
 scale = Vector2(1.5, 1.5)
+collision_mask = 14
 script = ExtResource("1_ya6y8")
 
 [node name="ColissionPlayerBody" type="CollisionPolygon2D" parent="."]

@@ -34,7 +34,7 @@ scale = Vector2(13374.3, 7087.16)
 mesh = SubResource("BoxMesh_nea6w")
 
 [node name="Player" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-625, 337)
+position = Vector2(-663, 192)
 
 [node name="Level1" parent="." instance=ExtResource("2_v674p")]
 position = Vector2(-777, 394)
