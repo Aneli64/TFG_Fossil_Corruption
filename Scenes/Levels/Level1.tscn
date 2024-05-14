@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://c6o730161onhl"]
 
-[ext_resource type="PackedScene" uid="uid://7q4fn2drwggt" path="res://Scenes/Monticulo1.tscn" id="2_7n4ws"]
-[ext_resource type="PackedScene" uid="uid://bykcia20b0wkd" path="res://Scenes/pinchos.tscn" id="2_6475x"]
-[ext_resource type="PackedScene" uid="uid://cmqnhm7yi2l53" path="res://Scenes/pared1.tscn" id="3_4qw4q"]
-[ext_resource type="PackedScene" uid="uid://re684wl5yohx" path="res://Scenes/Coleccionable_1.tscn" id="4_adhrj"]
-[ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Enemy.tscn" id="5_q8rvh"]
+[ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Characters/Enemy.tscn" id="1_subym"]
+[ext_resource type="PackedScene" uid="uid://7q4fn2drwggt" path="res://Scenes/Enviroment/Monticulo1.tscn" id="2_hxlmt"]
+[ext_resource type="PackedScene" uid="uid://bykcia20b0wkd" path="res://Scenes/Enviroment/pinchos.tscn" id="3_ld5ba"]
+[ext_resource type="PackedScene" uid="uid://cmqnhm7yi2l53" path="res://Scenes/Enviroment/pared1.tscn" id="4_lehts"]
+[ext_resource type="PackedScene" uid="uid://re684wl5yohx" path="res://Scenes/Enviroment/Coleccionable_1.tscn" id="5_vk33t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pna35"]
 resource_local_to_scene = true
@@ -42,19 +42,19 @@ size = Vector2(2048, 79)
 
 [node name="Level1" type="Node2D"]
 
-[node name="EnemyBody" parent="." instance=ExtResource("5_q8rvh")]
-position = Vector2(-318, -31)
+[node name="EnemyBody" parent="." instance=ExtResource("1_subym")]
+position = Vector2(824, 176)
 
-[node name="Monticulo1" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo1" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(20, 7)
 
-[node name="Monticulo1_1" parent="Monticulo1" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo1_1" parent="Monticulo1" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo1_2" parent="Monticulo1/Monticulo1_1" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo1_2" parent="Monticulo1/Monticulo1_1" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo1_3" parent="Monticulo1/Monticulo1_1/Monticulo1_2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo1_3" parent="Monticulo1/Monticulo1_1/Monticulo1_2" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo1"]
@@ -65,22 +65,22 @@ collision_mask = 11
 position = Vector2(-537, 104)
 shape = SubResource("RectangleShape2D_pna35")
 
-[node name="Monticulo2" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(2861, 6)
 
-[node name="Monticulo2_1" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2_1" parent="Monticulo2" instance=ExtResource("2_hxlmt")]
 position = Vector2(-321, 0)
 
-[node name="Monticulo2_3" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2_3" parent="Monticulo2" instance=ExtResource("2_hxlmt")]
 position = Vector2(315, 0)
 
-[node name="Monticulo2_2" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2_2" parent="Monticulo2" instance=ExtResource("2_hxlmt")]
 position = Vector2(601, 0)
 
-[node name="Monticulo2_4" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2_4" parent="Monticulo2" instance=ExtResource("2_hxlmt")]
 position = Vector2(902, 0)
 
-[node name="Monticulo2_5" parent="Monticulo2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo2_5" parent="Monticulo2" instance=ExtResource("2_hxlmt")]
 position = Vector2(1112, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo2"]
@@ -91,16 +91,16 @@ collision_mask = 11
 position = Vector2(-605, 98)
 shape = SubResource("RectangleShape2D_sri2a")
 
-[node name="Monticulo3" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo3" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(0, 527)
 
-[node name="Monticulo3_1" parent="Monticulo3" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo3_1" parent="Monticulo3" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo3_2" parent="Monticulo3/Monticulo3_1" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo3_2" parent="Monticulo3/Monticulo3_1" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo3_3" parent="Monticulo3/Monticulo3_1/Monticulo3_2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo3_3" parent="Monticulo3/Monticulo3_1/Monticulo3_2" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo3"]
@@ -111,13 +111,13 @@ collision_mask = 11
 position = Vector2(-520, 105)
 shape = SubResource("RectangleShape2D_xi13g")
 
-[node name="Monticulo4" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo4" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(2941, 516)
 
-[node name="Monticulo4_1" parent="Monticulo4" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo4_1" parent="Monticulo4" instance=ExtResource("2_hxlmt")]
 position = Vector2(-321, 0)
 
-[node name="Monticulo4_2" parent="Monticulo4" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo4_2" parent="Monticulo4" instance=ExtResource("2_hxlmt")]
 position = Vector2(315, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo4"]
@@ -128,16 +128,16 @@ collision_mask = 11
 position = Vector2(-1005, 100)
 shape = SubResource("RectangleShape2D_e3mje")
 
-[node name="Monticulo5" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo5" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(1681, 621)
 
-[node name="Monticulo5_1" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo5_1" parent="Monticulo5" instance=ExtResource("2_hxlmt")]
 position = Vector2(-321, 0)
 
-[node name="Monticulo5_2" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo5_2" parent="Monticulo5" instance=ExtResource("2_hxlmt")]
 position = Vector2(302, 0)
 
-[node name="Monticulo5_3" parent="Monticulo5" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo5_3" parent="Monticulo5" instance=ExtResource("2_hxlmt")]
 position = Vector2(576, 0)
 
 [node name="StaticBodyMonticulo2" type="StaticBody2D" parent="Monticulo5"]
@@ -148,10 +148,10 @@ collision_mask = 11
 position = Vector2(-873, 91)
 shape = SubResource("RectangleShape2D_aj52p")
 
-[node name="PlataformaMov1" parent="." instance=ExtResource("2_7n4ws")]
+[node name="PlataformaMov1" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(1958, 262)
 
-[node name="Monticulo6_1" parent="PlataformaMov1" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_1" parent="PlataformaMov1" instance=ExtResource("2_hxlmt")]
 position = Vector2(-321, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="PlataformaMov1"]
@@ -162,7 +162,7 @@ collision_mask = 11
 position = Vector2(-1164, 98)
 shape = SubResource("RectangleShape2D_b2beg")
 
-[node name="PlataformaMov2" parent="." instance=ExtResource("2_7n4ws")]
+[node name="PlataformaMov2" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(3770, 831)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="PlataformaMov2"]
@@ -174,28 +174,28 @@ collision_mask = 11
 position = Vector2(-1325.5, 109.5)
 shape = SubResource("RectangleShape2D_esixk")
 
-[node name="Monticulo6" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(496, 1140)
 
-[node name="Monticulo6_1" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_1" parent="Monticulo6" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo6_2" parent="Monticulo6/Monticulo6_1" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_2" parent="Monticulo6/Monticulo6_1" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo6_3" parent="Monticulo6/Monticulo6_1/Monticulo6_2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_3" parent="Monticulo6/Monticulo6_1/Monticulo6_2" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo6_3" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_3" parent="Monticulo6" instance=ExtResource("2_hxlmt")]
 position = Vector2(1282, 0)
 
-[node name="Monticulo6_4" parent="Monticulo6/Monticulo6_3" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_4" parent="Monticulo6/Monticulo6_3" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo8_2" parent="Monticulo6/Monticulo6_3/Monticulo6_4" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo8_2" parent="Monticulo6/Monticulo6_3/Monticulo6_4" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
-[node name="Monticulo8_3" parent="Monticulo6/Monticulo6_3/Monticulo6_4/Monticulo8_2" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo8_3" parent="Monticulo6/Monticulo6_3/Monticulo6_4/Monticulo8_2" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo6/Monticulo6_3"]
@@ -204,10 +204,10 @@ visible = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Monticulo6/Monticulo6_3/StaticBody2D"]
 polygon = PackedVector2Array(189, 33, 187, 113, 173, 128, 157, 138, 144, 149, 126, 163, -1162, 163, -1180, 153, -1195, 139, -1210, 126, -1229, 116, -1229, 40)
 
-[node name="Monticulo6_5" parent="Monticulo6" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_5" parent="Monticulo6" instance=ExtResource("2_hxlmt")]
 position = Vector2(2409, 0)
 
-[node name="Monticulo6_6" parent="Monticulo6/Monticulo6_5" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo6_6" parent="Monticulo6/Monticulo6_5" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo6"]
@@ -218,10 +218,10 @@ collision_mask = 11
 position = Vector2(360, 100)
 shape = SubResource("RectangleShape2D_w7d6r")
 
-[node name="Monticulo7" parent="." instance=ExtResource("2_7n4ws")]
+[node name="Monticulo7" parent="." instance=ExtResource("2_hxlmt")]
 position = Vector2(3587, 1201)
 
-[node name="Monticulo7_1" parent="Monticulo7" instance=ExtResource("2_7n4ws")]
+[node name="Monticulo7_1" parent="Monticulo7" instance=ExtResource("2_hxlmt")]
 position = Vector2(322, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Monticulo7"]
@@ -232,58 +232,58 @@ collision_mask = 11
 position = Vector2(-815, 95)
 shape = SubResource("RectangleShape2D_345pr")
 
-[node name="Grupo_Pinchos" parent="." instance=ExtResource("2_6475x")]
+[node name="Grupo_Pinchos" parent="." instance=ExtResource("3_ld5ba")]
 position = Vector2(252, 402)
 
-[node name="Pinchos" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(162, 0)
 
-[node name="Pinchos2" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos2" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(162, 0)
 
-[node name="Pinchos3" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos3" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(324, -1)
 
-[node name="Pinchos4" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos4" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(484, -1)
 
-[node name="Pinchos5" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos5" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(643, -1)
 
-[node name="Pinchos6" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos6" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(800, -1)
 
-[node name="Pinchos7" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos7" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(959, -1)
 
-[node name="Pinchos8" parent="Grupo_Pinchos" instance=ExtResource("2_6475x")]
+[node name="Pinchos8" parent="Grupo_Pinchos" instance=ExtResource("3_ld5ba")]
 position = Vector2(1070, -1)
 
-[node name="Grupo_Pinchos2" parent="." instance=ExtResource("2_6475x")]
+[node name="Grupo_Pinchos2" parent="." instance=ExtResource("3_ld5ba")]
 position = Vector2(2507, 979)
 
-[node name="Pinchos" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+[node name="Pinchos" parent="Grupo_Pinchos2" instance=ExtResource("3_ld5ba")]
 position = Vector2(162, 0)
 
-[node name="Pinchos2" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+[node name="Pinchos2" parent="Grupo_Pinchos2" instance=ExtResource("3_ld5ba")]
 position = Vector2(162, 0)
 
-[node name="Pinchos3" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+[node name="Pinchos3" parent="Grupo_Pinchos2" instance=ExtResource("3_ld5ba")]
 position = Vector2(324, -1)
 
-[node name="Pinchos4" parent="Grupo_Pinchos2" instance=ExtResource("2_6475x")]
+[node name="Pinchos4" parent="Grupo_Pinchos2" instance=ExtResource("3_ld5ba")]
 position = Vector2(489, -1)
 
-[node name="ParedIzq" parent="." instance=ExtResource("3_4qw4q")]
+[node name="ParedIzq" parent="." instance=ExtResource("4_lehts")]
 position = Vector2(-205, 469)
 
-[node name="Pared_01" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+[node name="Pared_01" parent="ParedIzq" instance=ExtResource("4_lehts")]
 position = Vector2(0, -475)
 
-[node name="Pared_02" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+[node name="Pared_02" parent="ParedIzq" instance=ExtResource("4_lehts")]
 position = Vector2(0, 491)
 
-[node name="Pared_03" parent="ParedIzq" instance=ExtResource("3_4qw4q")]
+[node name="Pared_03" parent="ParedIzq" instance=ExtResource("4_lehts")]
 position = Vector2(0, 945)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ParedIzq"]
@@ -295,17 +295,17 @@ position = Vector2(-1026.5, 99)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_unax4")
 
-[node name="ParedIzq2" parent="." instance=ExtResource("3_4qw4q")]
+[node name="ParedIzq2" parent="." instance=ExtResource("4_lehts")]
 position = Vector2(2150, 659)
 rotation = 3.14159
 
-[node name="Pared_01" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+[node name="Pared_01" parent="ParedIzq2" instance=ExtResource("4_lehts")]
 position = Vector2(0, -475)
 
-[node name="Pared_02" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+[node name="Pared_02" parent="ParedIzq2" instance=ExtResource("4_lehts")]
 position = Vector2(0, 491)
 
-[node name="Pared_03" parent="ParedIzq2" instance=ExtResource("3_4qw4q")]
+[node name="Pared_03" parent="ParedIzq2" instance=ExtResource("4_lehts")]
 position = Vector2(0, 945)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ParedIzq2"]
@@ -317,11 +317,11 @@ position = Vector2(-1026, 74.9974)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_whh00")
 
-[node name="Coleccionable1" parent="." instance=ExtResource("4_adhrj")]
+[node name="Coleccionable1" parent="." instance=ExtResource("5_vk33t")]
 position = Vector2(671, 180)
 
-[node name="Coleccionable3" parent="." instance=ExtResource("4_adhrj")]
+[node name="Coleccionable3" parent="." instance=ExtResource("5_vk33t")]
 position = Vector2(-164, -62)
 
-[node name="Coleccionable2" parent="." instance=ExtResource("4_adhrj")]
+[node name="Coleccionable2" parent="." instance=ExtResource("5_vk33t")]
 position = Vector2(935, 176)

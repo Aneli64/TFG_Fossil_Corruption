@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
 	# Iniciamos el sprite de estado estatico una vez inicie el juego
-	movementSprite.play("parado")
+	movementSprite.play("caminar")
 	# Movimiento por defecto
 	velocity.x = SPEED
 func orientation():

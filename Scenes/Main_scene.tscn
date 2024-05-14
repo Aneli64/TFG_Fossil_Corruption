@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://djv7k3fcpm8la"]
+[gd_scene load_steps=8 format=3 uid="uid://djv7k3fcpm8la"]
 
-[ext_resource type="PackedScene" uid="uid://ch4uh853uuiwn" path="res://Scenes/Player.tscn" id="2_d5ui2"]
-[ext_resource type="PackedScene" uid="uid://c6o730161onhl" path="res://Scenes/Level1.tscn" id="2_v674p"]
+[ext_resource type="PackedScene" uid="uid://ch4uh853uuiwn" path="res://Scenes/Characters/Player.tscn" id="2_d5ui2"]
+[ext_resource type="PackedScene" uid="uid://c6o730161onhl" path="res://Scenes/Levels/Level1.tscn" id="2_v674p"]
 [ext_resource type="PackedScene" uid="uid://djbwbkxhtodpo" path="res://Scenes/HUD.tscn" id="3_7al77"]
+[ext_resource type="PackedScene" uid="uid://svm76wnbv22t" path="res://Scenes/Levels/Level2.tscn" id="4_vbhce"]
+[ext_resource type="PackedScene" uid="uid://dc6yqjk6vljmt" path="res://Scenes/Levels/Level3.tscn" id="5_rboek"]
 
 [sub_resource type="GDScript" id="GDScript_tddbd"]
 script/source = "extends Node2D
@@ -29,14 +31,20 @@ script = SubResource("GDScript_tddbd")
 
 [node name="fondo" type="MeshInstance2D" parent="."]
 modulate = Color(0.207843, 0.192157, 0.0901961, 1)
-position = Vector2(1103, 1772)
+position = Vector2(635, 1768)
 scale = Vector2(13374.3, 7087.16)
 mesh = SubResource("BoxMesh_nea6w")
 
 [node name="Player" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-663, 192)
+position = Vector2(-244, 569)
 
 [node name="Level1" parent="." instance=ExtResource("2_v674p")]
 position = Vector2(-777, 394)
 
 [node name="Hud" parent="." instance=ExtResource("3_7al77")]
+
+[node name="Level2" parent="." instance=ExtResource("4_vbhce")]
+position = Vector2(-773, 2400)
+
+[node name="Level3" parent="." instance=ExtResource("5_rboek")]
+position = Vector2(3625, 1918)
