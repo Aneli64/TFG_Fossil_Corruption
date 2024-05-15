@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b11kycni0mwxh"
-path="res://.godot/imported/Run (13).png-09d6a1712e034560ad4b8dc7a1f9b507.ctex"
+uid="uid://cbl4llyvdedvl"
+path="res://.godot/imported/Modelo_Basico_Personaje.png-50fd568cf36bb7f570c08e58b3ddb13f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Run (13).png"
-dest_files=["res://.godot/imported/Run (13).png-09d6a1712e034560ad4b8dc7a1f9b507.ctex"]
+source_file="res://Sprites/Player/Modelo_Basico_Personaje.png"
+dest_files=["res://.godot/imported/Modelo_Basico_Personaje.png-50fd568cf36bb7f570c08e58b3ddb13f.ctex"]
 
 [params]
 

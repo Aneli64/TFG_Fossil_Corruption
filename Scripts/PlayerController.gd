@@ -9,9 +9,9 @@ var points = 0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var movementSprite = $MovementSprite
 
-func _ready():
+#func _ready():
 	# Iniciamos el sprite de estado estatico una vez inicie el juego
-	movementSprite.play("parado")
+	#movementSprite.play("parado")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -30,6 +30,6 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		movementSprite.stop() 
-		movementSprite.play("parado")
+		#movementSprite.play("parado")
 
 	move_and_slide()
