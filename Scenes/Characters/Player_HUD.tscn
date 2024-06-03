@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://djbwbkxhtodpo"]
+
+[ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_6lmle"]
+[ext_resource type="Texture2D" uid="uid://cmpksqlbyipkk" path="res://Sprites/Player/icono_life_personaje.png" id="2_bka7b"]
+[ext_resource type="Texture2D" uid="uid://b4f7ncikh5fid" path="res://Sprites/Player/pico_arrojadizo.png" id="3_0fgd6"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_6lmle")
+
+[node name="str_health_name" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 30.0
+offset_bottom = 32.0
+text = "HP"
+
+[node name="str_points_name" type="Label" parent="."]
+offset_left = 197.0
+offset_top = 9.0
+offset_right = 219.0
+offset_bottom = 32.0
+text = "COINS"
+
+[node name="points" type="Label" parent="."]
+offset_left = 256.0
+offset_top = 9.0
+offset_right = 305.0
+offset_bottom = 32.0
+text = "0"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.458824, 0.835294, 0.258824, 1)
+offset_left = 41.0
+offset_top = 7.0
+offset_right = 181.0
+offset_bottom = 34.0
+step = 1.0
+show_percentage = false
+
+[node name="str_lifes_name" type="Label" parent="."]
+offset_left = 1051.0
+offset_top = 13.0
+offset_right = 1091.0
+offset_bottom = 36.0
+text = "LIFES x"
+
+[node name="lifes" type="Label" parent="."]
+offset_left = 1111.0
+offset_top = 13.0
+offset_right = 1151.0
+offset_bottom = 36.0
+text = "5"
+
+[node name="icono_personaje" type="TextureRect" parent="."]
+offset_left = 1007.0
+offset_top = 5.0
+offset_right = 1047.0
+offset_bottom = 45.0
+texture = ExtResource("2_bka7b")
+
+[node name="str_municion_arma_arroj" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 591.0
+offset_right = 119.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 29
+text = "x"
+
+[node name="icono_arma_arroj" type="TextureRect" parent="."]
+offset_left = -15.0
+offset_top = 573.0
+offset_right = 76.0
+offset_bottom = 640.0
+texture = ExtResource("3_0fgd6")
+expand_mode = 1
+
+[node name="municion_arma" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 593.0
+offset_right = 180.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 30
+text = "10"

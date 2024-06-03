@@ -1,18 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bykcia20b0wkd"]
+[gd_scene load_steps=3 format=3 uid="uid://bykcia20b0wkd"]
 
-[ext_resource type="Texture2D" uid="uid://bdh6h55lwp3so" path="res://Sprites/Escenario/pinchos.png" id="1_vwbft"]
+[ext_resource type="Script" path="res://Scripts/pinchos.gd" id="1_26oww"]
+[ext_resource type="Texture2D" uid="uid://bdh6h55lwp3so" path="res://Sprites/Escenario/otros/pinchos.png" id="1_vwbft"]
 
 [node name="Pinchos" type="Node2D" groups=["DañoLetal1"]]
+script = ExtResource("1_26oww")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(-64, 251, -64, 234, -56, 197, -42, 139, -37, 145, -27, 181, -14, 220, -2, 191, 14, 135, 20, 142, 33, 198, 43, 214, 53, 196, 64, 146, 70, 135, 89, 206, 97, 236, 100, 253)
+position = Vector2(9.81292, 90.4093)
+scale = Vector2(0.510715, 0.538059)
+polygon = PackedVector2Array(-64, 251, -64, 234, -56, 197, -42, 139, -37, 145, -27, 181, -14, 220, -3.54977, 188.81, 14, 135, 27.7789, 159.073, 27.7789, 173.941, 43, 214, 59.1075, 203.678, 59.1075, 173.941, 74.7718, 144.205, 90.4361, 188.81, 90.4361, 218.546, 100, 253)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 3
 position = Vector2(23.25, 195.018)
-scale = Vector2(5.48438, 3.75113)
+scale = Vector2(2.924, 2)
 texture = ExtResource("1_vwbft")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

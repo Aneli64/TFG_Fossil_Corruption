@@ -1,65 +1,155 @@
-[gd_scene load_steps=10 format=3 uid="uid://duxrb47qwrxwl"]
+[gd_scene load_steps=19 format=3 uid="uid://duxrb47qwrxwl"]
 
 [ext_resource type="Script" path="res://Scripts/EnemyController.gd" id="1_nkldl"]
-[ext_resource type="Texture2D" uid="uid://xni03ebe7q4v" path="res://Sprites/Final_Enemy/Wings-1-removebg-preview.png" id="2_frbhr"]
-[ext_resource type="Texture2D" uid="uid://cmv0t2ei1i33g" path="res://Sprites/Final_Enemy/Wings-2-removebg-preview.png" id="3_4etry"]
-[ext_resource type="Texture2D" uid="uid://dtgnbrrjbvpxj" path="res://Sprites/Final_Enemy/Wings-3-removebg-preview.png" id="4_aphml"]
-[ext_resource type="Texture2D" uid="uid://cg6epgwaut568" path="res://Sprites/Final_Enemy/Wings-4-removebg-preview.png" id="5_0h5wf"]
-[ext_resource type="Texture2D" uid="uid://tfg72qoi0c1y" path="res://Sprites/Final_Enemy/Wings-5-removebg-preview.png" id="6_g6hea"]
-[ext_resource type="Texture2D" uid="uid://c6ihi504vcmvb" path="res://Sprites/Final_Enemy/Wings-6-removebg-preview.png" id="7_sq1fm"]
+[ext_resource type="Texture2D" uid="uid://xni03ebe7q4v" path="res://Sprites/Final_Enemy/Enemy_1/Wings-1-removebg-preview.png" id="2_prujs"]
+[ext_resource type="Texture2D" uid="uid://cmv0t2ei1i33g" path="res://Sprites/Final_Enemy/Enemy_1/Wings-2-removebg-preview.png" id="3_8ohes"]
+[ext_resource type="Texture2D" uid="uid://dtgnbrrjbvpxj" path="res://Sprites/Final_Enemy/Enemy_1/Wings-3-removebg-preview.png" id="4_lpgua"]
+[ext_resource type="Texture2D" uid="uid://cg6epgwaut568" path="res://Sprites/Final_Enemy/Enemy_1/Wings-4-removebg-preview.png" id="5_3q58g"]
+[ext_resource type="Texture2D" uid="uid://tfg72qoi0c1y" path="res://Sprites/Final_Enemy/Enemy_1/Wings-5-removebg-preview.png" id="6_jiru3"]
+[ext_resource type="Texture2D" uid="uid://c6ihi504vcmvb" path="res://Sprites/Final_Enemy/Enemy_1/Wings-6-removebg-preview.png" id="7_atsd4"]
+[ext_resource type="Script" path="res://Scripts/Enemy_HUD.gd" id="8_fv366"]
+[ext_resource type="Texture2D" uid="uid://dolxtmhctcyhs" path="res://Sprites/Final_Enemy/Enemy_1/Wings-1-removebg-preview-sheet.png" id="8_un5ct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2iiwi"]
+atlas = ExtResource("8_un5ct")
+region = Rect2(0, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mls4m"]
+atlas = ExtResource("8_un5ct")
+region = Rect2(81, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a11bq"]
+atlas = ExtResource("8_un5ct")
+region = Rect2(162, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uf2m8"]
+atlas = ExtResource("8_un5ct")
+region = Rect2(243, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1wui"]
+atlas = ExtResource("8_un5ct")
+region = Rect2(324, 0, 81, 68)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m6woq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_frbhr")
+"texture": ExtResource("2_prujs")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4etry")
+"texture": ExtResource("3_8ohes")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_aphml")
+"texture": ExtResource("4_lpgua")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0h5wf")
+"texture": ExtResource("5_3q58g")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_g6hea")
+"texture": ExtResource("6_jiru3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_sq1fm")
+"texture": ExtResource("7_atsd4")
 }],
 "loop": true,
 "name": &"caminar",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2iiwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mls4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a11bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uf2m8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1wui")
+}],
+"loop": false,
+"name": &"muerte",
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_166dk"]
-radius = 48.0
+radius = 32.0
 
-[node name="EnemyBody" type="CharacterBody2D"]
-scale = Vector2(1.5, 1.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_044c7"]
+radius = 32.1109
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kiln8"]
+bg_color = Color(0.662745, 0.133333, 0.188235, 1)
+
+[node name="EnemyBody" type="CharacterBody2D" groups=["Enemy"]]
+position = Vector2(16, 24)
 collision_layer = 2
-collision_mask = 10
+collision_mask = 8
 script = ExtResource("1_nkldl")
-
-[node name="FloorRay" type="RayCast2D" parent="."]
-position = Vector2(9.99993, 0)
-collision_mask = 11
 
 [node name="MovementSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-21.3333, -10.6667)
-scale = Vector2(1.21811, 1.21569)
 sprite_frames = SubResource("SpriteFrames_m6woq")
 animation = &"caminar"
-frame_progress = 0.777824
-
-[node name="ColissionRay" type="RayCast2D" parent="."]
-position = Vector2(10.6667, 0)
-scale = Vector2(2, 4)
-target_position = Vector2(23, 0)
-collision_mask = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -10.6667)
 shape = SubResource("CircleShape2D_166dk")
+
+[node name="ColissionRay" type="RayCast2D" parent="CollisionShape2D"]
+position = Vector2(8, 2.6667)
+scale = Vector2(2, 4)
+target_position = Vector2(28, 0)
+collision_mask = 10
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 33
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-16, -10.6667)
+shape = SubResource("CircleShape2D_044c7")
+
+[node name="FloorRay" type="RayCast2D" parent="."]
+position = Vector2(24, -8)
+target_position = Vector2(0, 32)
+collision_mask = 10
+
+[node name="Enemy_HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -165.0
+offset_top = -101.0
+offset_right = 128.0
+offset_bottom = -61.0
+script = ExtResource("8_fv366")
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Enemy_HUD"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -29.5
+offset_top = -3.0
+offset_right = 34.5
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/background = SubResource("StyleBoxFlat_kiln8")
+step = 1.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[connection signal="animation_finished" from="MovementSprite" to="." method="_on_movement_sprite_animation_finished"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

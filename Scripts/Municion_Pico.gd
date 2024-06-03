@@ -10,5 +10,5 @@ func _ready():
 # puntuación y eliminaremos la moneda de la escena
 func _on_area_2d_body_entered(body):
 	if (body.name == "PlayerBody"):
-		Global.sumar_pts(1)
+		Global.sumar_municion(10)
 		queue_free()

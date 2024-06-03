@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://dm185h3nxxd5j"]
+
+[ext_resource type="Script" path="res://Scripts/Municion_Pico.gd" id="1_ynibs"]
+[ext_resource type="Texture2D" uid="uid://teuecvvrmgbw" path="res://Sprites/Escenario/otros/sheet_pico_añadidot.png" id="2_jsh05"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0kd6"]
+radius = 25.318
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd52v"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5jv4"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uol56"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rrs5"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6alf"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(2000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4bul"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(2500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smd10"]
+atlas = ExtResource("2_jsh05")
+region = Rect2(3000, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqv7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd52v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5jv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uol56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rrs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6alf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4bul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smd10")
+}],
+"loop": true,
+"name": &"BasicMovement",
+"speed": 24.0
+}]
+
+[node name="MunicionPico" type="Node2D"]
+script = ExtResource("1_ynibs")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -9)
+shape = SubResource("CircleShape2D_m0kd6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(-2.1875, -5.83594)
+scale = Vector2(0.19525, 0.184656)
+sprite_frames = SubResource("SpriteFrames_iqv7c")
+animation = &"BasicMovement"
+speed_scale = 0.5
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

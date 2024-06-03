@@ -1,0 +1,110 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqvd8cecpod46"]
+
+[ext_resource type="Script" path="res://Scripts/Arma_arroj.gd" id="1_lq018"]
+[ext_resource type="Texture2D" uid="uid://cxljqew4wgb3a" path="res://Sprites/Player/pico_arrojadizo-sheet.png" id="2_p42pq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trj1g"]
+atlas = ExtResource("2_p42pq")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sepdh"]
+atlas = ExtResource("2_p42pq")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krfiu"]
+atlas = ExtResource("2_p42pq")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dss8o"]
+atlas = ExtResource("2_p42pq")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i822p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trj1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sepdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krfiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dss8o")
+}],
+"loop": false,
+"name": &"broken",
+"speed": 20.0
+}]
+
+[sub_resource type="Animation" id="Animation_u57dq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrojSprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5cusx"]
+resource_name = "rotation"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrojSprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efusa"]
+_data = {
+"RESET": SubResource("Animation_u57dq"),
+"rotation": SubResource("Animation_5cusx")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0tddl"]
+radius = 9.0
+height = 18.0
+
+[node name="ArmaArroj" type="Node2D"]
+position = Vector2(19, 13)
+script = ExtResource("1_lq018")
+
+[node name="ArrojSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+position = Vector2(38, 20)
+scale = Vector2(0.066, 0.05)
+sprite_frames = SubResource("SpriteFrames_i822p")
+animation = &"broken"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_efusa")
+}
+autoplay = "rotation"
+
+[node name="Hitbox" type="Area2D" parent="." groups=["ArmaArroj"]]
+collision_layer = 32
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(39, 20)
+shape = SubResource("CapsuleShape2D_0tddl")
+
+[connection signal="animation_finished" from="ArrojSprite" to="." method="_on_arroj_sprite_animation_finished"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

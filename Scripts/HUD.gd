@@ -1,9 +1,13 @@
 extends CanvasLayer
 
 func _ready():
-	$ProgressBar.value = get_parent().get_node("Player").health
-	$points.text = str(get_parent().get_node("Player").points)
+	$ProgressBar.value = Global.hp
+	$points.text = str(Global.points)
+	$lifes.text = str(Global.lifes)
+	$municion_arma.text = str(Global.weapon_ammun)
 
 func _process(delta):
-	$ProgressBar.value = get_parent().get_node("Player").health
-	$points.text = str(get_parent().get_node("Player").points)
+	$ProgressBar.value = Global.hp
+	$points.text = str(Global.points)
+	$lifes.text = str(Global.lifes)
+	$municion_arma.text = str(Global.weapon_ammun)

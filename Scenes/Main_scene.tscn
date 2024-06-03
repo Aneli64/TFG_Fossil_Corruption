@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://djv7k3fcpm8la"]
+[gd_scene load_steps=12 format=3 uid="uid://djv7k3fcpm8la"]
 
 [ext_resource type="PackedScene" uid="uid://ch4uh853uuiwn" path="res://Scenes/Characters/Player.tscn" id="2_d5ui2"]
-[ext_resource type="PackedScene" uid="uid://c6o730161onhl" path="res://Scenes/Levels/Level1.tscn" id="2_v674p"]
-[ext_resource type="PackedScene" uid="uid://djbwbkxhtodpo" path="res://Scenes/HUD.tscn" id="3_7al77"]
-[ext_resource type="PackedScene" uid="uid://svm76wnbv22t" path="res://Scenes/Levels/Level2.tscn" id="4_vbhce"]
-[ext_resource type="PackedScene" uid="uid://dc6yqjk6vljmt" path="res://Scenes/Levels/Level3.tscn" id="5_rboek"]
+[ext_resource type="PackedScene" uid="uid://djbwbkxhtodpo" path="res://Scenes/Characters/Player_HUD.tscn" id="3_7al77"]
+[ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Characters/Enemy.tscn" id="5_n8vgd"]
+[ext_resource type="PackedScene" uid="uid://dm5n1anmjh7t4" path="res://Scenes/Global.tscn" id="6_et0n3"]
+[ext_resource type="PackedScene" uid="uid://bfh8jrpfims4j" path="res://Scenes/Characters/Enemy_2.tscn" id="6_k8ywh"]
+[ext_resource type="PackedScene" uid="uid://dph6xurtgvf2t" path="res://Scenes/Levels/TileMap.tscn" id="7_e5fd5"]
+[ext_resource type="PackedScene" uid="uid://bykcia20b0wkd" path="res://Scenes/Enviroment/pinchos.tscn" id="7_jhjjm"]
+[ext_resource type="PackedScene" uid="uid://re684wl5yohx" path="res://Scenes/Enviroment/Coleccionable_1.tscn" id="8_63hvd"]
+[ext_resource type="PackedScene" uid="uid://dm185h3nxxd5j" path="res://Scenes/Enviroment/Municion_Pico.tscn" id="9_k4can"]
 
 [sub_resource type="GDScript" id="GDScript_tddbd"]
 script/source = "extends Node2D
@@ -12,10 +16,10 @@ script/source = "extends Node2D
 # Variable para almacenar la referencia al nodo del personaje
 var player = null
 var camera = Camera2D
-func _ready():
-	# Encuentra el nodo del personaje y almacena una referencia a él
-	player = get_node(\"CharacterBody2D\")
-	
+#func _ready():
+	## Encuentra el nodo del personaje y almacena una referencia a él
+	#player = get_node(\"CharacterBody2D\")
+	#
 func _process(delta):
 	# Verifica si se ha establecido una referencia al nodo del personaje
 	if player != null:
@@ -31,20 +35,115 @@ script = SubResource("GDScript_tddbd")
 
 [node name="fondo" type="MeshInstance2D" parent="."]
 modulate = Color(0.207843, 0.192157, 0.0901961, 1)
-position = Vector2(635, 1768)
-scale = Vector2(13374.3, 7087.16)
+position = Vector2(2819, 3385)
+scale = Vector2(1e+06, 1e+06)
 mesh = SubResource("BoxMesh_nea6w")
 
-[node name="Player" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-244, 569)
-
-[node name="Level1" parent="." instance=ExtResource("2_v674p")]
-position = Vector2(-777, 394)
+[node name="TileMap" parent="." instance=ExtResource("7_e5fd5")]
+position = Vector2(-1754, -64)
 
 [node name="Hud" parent="." instance=ExtResource("3_7al77")]
 
-[node name="Level2" parent="." instance=ExtResource("4_vbhce")]
-position = Vector2(-773, 2400)
+[node name="Global" parent="." instance=ExtResource("6_et0n3")]
 
-[node name="Level3" parent="." instance=ExtResource("5_rboek")]
-position = Vector2(3625, 1918)
+[node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
+position = Vector2(-1521, 8)
+collision_mask = 12
+
+[node name="Enemigos" type="Node2D" parent="."]
+
+[node name="bat1" parent="Enemigos" instance=ExtResource("5_n8vgd")]
+position = Vector2(-1261, 83)
+
+[node name="bat2" parent="Enemigos" instance=ExtResource("5_n8vgd")]
+position = Vector2(-1445, 472)
+
+[node name="bat3" parent="Enemigos" instance=ExtResource("5_n8vgd")]
+position = Vector2(-157, 523)
+
+[node name="bat4" parent="Enemigos" instance=ExtResource("5_n8vgd")]
+position = Vector2(168, 528)
+
+[node name="devilHorse1" parent="Enemigos" instance=ExtResource("6_k8ywh")]
+position = Vector2(-1220, 788)
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Coleccionable1" parent="Items" instance=ExtResource("8_63hvd")]
+position = Vector2(-871, 81)
+
+[node name="Coleccionable2" parent="Items" instance=ExtResource("8_63hvd")]
+position = Vector2(191, 239)
+
+[node name="Coleccionable3" parent="Items" instance=ExtResource("8_63hvd")]
+position = Vector2(-1194, 460)
+
+[node name="Coleccionable4" parent="Items" instance=ExtResource("8_63hvd")]
+position = Vector2(355, 233)
+
+[node name="MunicionPico1" parent="Items" instance=ExtResource("9_k4can")]
+position = Vector2(-1619, 458)
+
+[node name="MunicionPico2" parent="Items" instance=ExtResource("9_k4can")]
+position = Vector2(-309, 74)
+
+[node name="MunicionPico3" parent="Items" instance=ExtResource("9_k4can")]
+position = Vector2(-1307, 788)
+
+[node name="Trampas" type="Node2D" parent="."]
+
+[node name="Pinchos_LV1" parent="Trampas" instance=ExtResource("7_jhjjm")]
+position = Vector2(-1021, 315)
+
+[node name="Pinchos2" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
+position = Vector2(166, 0)
+
+[node name="Pinchos3" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
+position = Vector2(84, 0)
+
+[node name="Pinchos5" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
+position = Vector2(250, 1)
+
+[node name="Pinchos6" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
+position = Vector2(307, -1)
+
+[node name="Pinchos_LV2" parent="Trampas" instance=ExtResource("7_jhjjm")]
+position = Vector2(65, 886)
+
+[node name="Pinchos1" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(90, -27)
+rotation = -1.5708
+
+[node name="Pinchos1_2" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(91, 52)
+rotation = -1.5708
+
+[node name="Pinchos2" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(166, 0)
+
+[node name="Pinchos3" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(84, 0)
+
+[node name="Pinchos5" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(250, 1)
+
+[node name="Pinchos4" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-233, 0)
+
+[node name="Pinchos6" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-315, 0)
+
+[node name="Pinchos7" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-394, -1)
+
+[node name="Pinchos8" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-786, 52)
+
+[node name="Pinchos9" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-828, 53)
+
+[node name="Pinchos10" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-1223, 53)
+
+[node name="Pinchos11" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
+position = Vector2(-1183, 53)

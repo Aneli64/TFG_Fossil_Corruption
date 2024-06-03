@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b5nasjdfraxbg"]
+
+[node name="EnemyHud" type="CanvasLayer"]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.819608, 0.0235294, 0, 1)
+offset_left = -63.0
+offset_top = -85.0
+offset_bottom = -81.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+step = 1.0
+value = 100.0
+show_percentage = false
