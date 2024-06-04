@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://ch4uh853uuiwn"]
+[gd_scene load_steps=30 format=3 uid="uid://ch4uh853uuiwn"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_ya6y8"]
 [ext_resource type="PackedScene" uid="uid://cqvd8cecpod46" path="res://Scenes/Enviroment/Arma_arroj.tscn" id="2_166km"]
 [ext_resource type="Texture2D" uid="uid://cpdi0hkhqhuqt" path="res://Sprites/Player/Caminar_Personaje.png" id="2_jl5iq"]
 [ext_resource type="Texture2D" uid="uid://dqtp5xcvexys3" path="res://Sprites/Player/Muerte_Personaje.png" id="3_44pmb"]
 [ext_resource type="Texture2D" uid="uid://c5133ryxd1mb6" path="res://Sprites/Player/Parado_Personaje.png" id="4_g1ay0"]
+[ext_resource type="Texture2D" uid="uid://bea4hdibj5mrs" path="res://Sprites/Player/Player_hit.png" id="4_i1a65"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6e5v"]
 atlas = ExtResource("2_jl5iq")
@@ -21,6 +22,26 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_il8wl"]
 atlas = ExtResource("2_jl5iq")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l86uu"]
+atlas = ExtResource("4_i1a65")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbuos"]
+atlas = ExtResource("4_i1a65")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1kyl"]
+atlas = ExtResource("4_i1a65")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4re8"]
+atlas = ExtResource("4_i1a65")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7wxx"]
+atlas = ExtResource("4_i1a65")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c8upk"]
 atlas = ExtResource("3_44pmb")
@@ -87,6 +108,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_l86uu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbuos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1kyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4re8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7wxx")
+}],
+"loop": false,
+"name": &"golpe",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_c8upk")
 }, {
 "duration": 1.0,
@@ -148,7 +189,7 @@ texture_filter = 3
 position = Vector2(14.0667, 45.9)
 scale = Vector2(1.5, 1.527)
 sprite_frames = SubResource("SpriteFrames_m6woq")
-animation = &"parado"
+animation = &"caminar"
 autoplay = "parado"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -159,10 +200,10 @@ position = Vector2(12.6667, 46)
 shape = SubResource("CapsuleShape2D_sjy0r")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(12.6667, 46)
 shape = SubResource("CapsuleShape2D_xqvjg")
 
 [connection signal="animation_finished" from="MovementSprite" to="." method="_on_movement_sprite_animation_finished"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

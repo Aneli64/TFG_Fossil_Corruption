@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://duxrb47qwrxwl"]
+[gd_scene load_steps=25 format=3 uid="uid://duxrb47qwrxwl"]
 
 [ext_resource type="Script" path="res://Scripts/EnemyController.gd" id="1_nkldl"]
 [ext_resource type="Texture2D" uid="uid://xni03ebe7q4v" path="res://Sprites/Final_Enemy/Enemy_1/Wings-1-removebg-preview.png" id="2_prujs"]
@@ -8,7 +8,28 @@
 [ext_resource type="Texture2D" uid="uid://tfg72qoi0c1y" path="res://Sprites/Final_Enemy/Enemy_1/Wings-5-removebg-preview.png" id="6_jiru3"]
 [ext_resource type="Texture2D" uid="uid://c6ihi504vcmvb" path="res://Sprites/Final_Enemy/Enemy_1/Wings-6-removebg-preview.png" id="7_atsd4"]
 [ext_resource type="Script" path="res://Scripts/Enemy_HUD.gd" id="8_fv366"]
-[ext_resource type="Texture2D" uid="uid://dolxtmhctcyhs" path="res://Sprites/Final_Enemy/Enemy_1/Wings-1-removebg-preview-sheet.png" id="8_un5ct"]
+[ext_resource type="Texture2D" uid="uid://dolxtmhctcyhs" path="res://Sprites/Final_Enemy/Enemy_1/muerte_bat.png" id="8_un5ct"]
+[ext_resource type="Texture2D" uid="uid://bp1gp34imj3l1" path="res://Sprites/Final_Enemy/Enemy_1/animacion_golpe_batt.png" id="9_4q6n0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq0od"]
+atlas = ExtResource("9_4q6n0")
+region = Rect2(0, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ng8"]
+atlas = ExtResource("9_4q6n0")
+region = Rect2(81, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhnki"]
+atlas = ExtResource("9_4q6n0")
+region = Rect2(162, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33y2j"]
+atlas = ExtResource("9_4q6n0")
+region = Rect2(243, 0, 81, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elyf5"]
+atlas = ExtResource("9_4q6n0")
+region = Rect2(324, 0, 81, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2iiwi"]
 atlas = ExtResource("8_un5ct")
@@ -57,6 +78,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_uq0od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ng8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhnki")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33y2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elyf5")
+}],
+"loop": false,
+"name": &"golpe",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2iiwi")
 }, {
 "duration": 1.0,
@@ -73,7 +114,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"muerte",
-"speed": 10.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_166dk"]
@@ -94,7 +135,7 @@ script = ExtResource("1_nkldl")
 [node name="MovementSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(-21.3333, -10.6667)
 sprite_frames = SubResource("SpriteFrames_m6woq")
-animation = &"caminar"
+animation = &"muerte"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-16, -10.6667)

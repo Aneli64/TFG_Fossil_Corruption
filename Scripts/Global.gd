@@ -5,6 +5,7 @@ var hp = 100
 var points = 0
 var lifes = 5
 var weapon_ammun = 10
+var enemy_hit = false
 
 func reducir_vida(cantidad):
 	hp -= cantidad

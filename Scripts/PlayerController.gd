@@ -55,11 +55,11 @@ func _physics_process(delta):
 	respawn_player()
 		
 	move_and_slide()
-
+	
+	if Global.enemy_hit == true:
+		movementSprite.play("golpe")
+		print("golpe")
+		Global.enemy_hit = false
+		
 func _on_movement_sprite_animation_finished():
 	Global.respawn()
-
-
-func _on_area_2d_area_entered(area):
-# Ataque que realiza el enemigo al contacto con el player
-	Global.reducir_vida(20)

@@ -8,11 +8,16 @@ var enemy_hp_2 = 100
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var movementSprite = $MovementSprite
 
+func respawn_enemy():
+	if enemy_hp_2 == 0:
+		$MovementSprite.play("muerte")
+
 func _ready():
 	# Iniciamos el sprite de estado estatico una vez inicie el juego
 	movementSprite.play("caminar")
 	# Movimiento por defecto
 	velocity.x = SPEED
+	
 func orientation():
 	if velocity.x >= 0:
 		$MovementSprite.flip_h = false
@@ -26,22 +31,32 @@ func colission():
 		
 	
 func _physics_process(delta):
-	orientation()
-	# Comprobamos colisiones de izquierda y derecha (y no permitimos que caiga )
-	colission()
-	# Controlamos la gravedad
-	if not is_on_floor():
-		velocity.y += gravity * delta
-		
-	move_and_slide()
+	if enemy_hp_2 > 0:
+		orientation()
+		# Comprobamos colisiones de izquierda y derecha (y no permitimos que caiga )
+		colission()
+		# Controlamos la gravedad
+		if not is_on_floor():
+			velocity.y += gravity * delta
+		move_and_slide()
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player"):
 		# Ataque que realiza el enemigo al contacto con el player
 		Global.reducir_vida(20)
+		Global.enemy_hit = true
 	if area.is_in_group("ArmaArroj"):
+		$MovementSprite.play("golpe")
 		enemy_hp_2 -= 20
 	# Si pierde todos sus hp, desaparece de la escena
-	if (enemy_hp_2 <= 0): # Falta añadir un sprite para que se vaya
-		self.queue_free()
+	if (enemy_hp_2 <= 0):
+		$Enemy_HUD_2/ProgressBar.visible = false
+		$MovementSprite.play("muerte")
 		
+
+# Mientras que la animación finalizada sea la de muerte, este hara despawn
+func _on_movement_sprite_animation_finished():
+	if movementSprite.animation == "muerte":
+		self.queue_free()
+	else: 
+		movementSprite.play("caminar")

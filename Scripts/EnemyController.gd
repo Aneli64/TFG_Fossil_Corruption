@@ -44,7 +44,9 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player"):
 		# Ataque que realiza el enemigo al contacto con el player
 		Global.reducir_vida(20)
+		Global.enemy_hit = true
 	if area.is_in_group("ArmaArroj"):
+		$MovementSprite.play("golpe")
 		enemy_hp -= 20
 	# Si pierde todos sus hp, desaparece de la escena
 	if (enemy_hp <= 0):
@@ -52,5 +54,9 @@ func _on_area_2d_area_entered(area):
 		$MovementSprite.play("muerte")
 		
 
+# Mientras que la animación finalizada sea la de muerte, este hara despawn
 func _on_movement_sprite_animation_finished():
-	self.queue_free()
+	if movementSprite.animation == "muerte":
+		self.queue_free()
+	else: 
+		movementSprite.play("caminar")

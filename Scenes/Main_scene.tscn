@@ -47,7 +47,7 @@ position = Vector2(-1754, -64)
 [node name="Global" parent="." instance=ExtResource("6_et0n3")]
 
 [node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-1521, 8)
+position = Vector2(-625, 710)
 collision_mask = 12
 
 [node name="Enemigos" type="Node2D" parent="."]
