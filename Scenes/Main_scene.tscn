@@ -38,17 +38,14 @@ position = Vector2(3667, 4341)
 scale = Vector2(1e+06, 1e+06)
 mesh = SubResource("BoxMesh_nea6w")
 
-[node name="TileMap" parent="." instance=ExtResource("7_e5fd5")]
-position = Vector2(-1754, -64)
+[node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
+position = Vector2(-1562, -6)
+scale = Vector2(1.18374, 1.40625)
+collision_mask = 12
 
 [node name="Hud" parent="." instance=ExtResource("3_7al77")]
 
 [node name="Global" parent="." instance=ExtResource("6_et0n3")]
-
-[node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-1415, 1005)
-scale = Vector2(1.18374, 1.40625)
-collision_mask = 12
 
 [node name="Enemigos" type="Node2D" parent="."]
 
@@ -227,7 +224,11 @@ position = Vector2(19, 1386)
 [node name="Pinchos4" parent="Trampas/Pinchos_LV4" instance=ExtResource("7_jhjjm")]
 position = Vector2(-43, 1386)
 
+[node name="TileMap" parent="." instance=ExtResource("7_e5fd5")]
+position = Vector2(-1754, -64)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("11_yvqkd")
 volume_db = -30.0
 autoplay = true

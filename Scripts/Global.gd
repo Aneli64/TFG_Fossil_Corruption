@@ -17,7 +17,10 @@ func sumar_pts(pts):
 	points += pts
 	
 func sumar_hp(hps):
-	hp += hps	
+	if (hp + hps) < 100:
+		hp += hps
+	else:
+		hp += 100 - hp
 	
 func sumar_municion(munic):
 	weapon_ammun += munic

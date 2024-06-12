@@ -1,26 +1,68 @@
-[gd_scene load_steps=7 format=3 uid="uid://re684wl5yohx"]
+[gd_scene load_steps=13 format=3 uid="uid://re684wl5yohx"]
 
 [ext_resource type="Script" path="res://Scripts/Coleccionable_1.gd" id="1_oy3r6"]
-[ext_resource type="Texture2D" uid="uid://b5p16fopwlgoh" path="res://Sprites/Escenario/otros/puntos_esmeralda/esmeralda.png" id="2_gsw1x"]
-[ext_resource type="Texture2D" uid="uid://daakagau2vlv4" path="res://Sprites/Escenario/otros/puntos_esmeralda/esmeralda_2.png" id="3_v60y7"]
+[ext_resource type="Texture2D" uid="uid://ccoin1nsdbpcs" path="res://Sprites/Escenario/otros/puntos_esmeralda/esmeralda-sheet.png" id="2_wteb5"]
 [ext_resource type="AudioStream" uid="uid://b0qej50cgm7ac" path="res://Sounds/coin.wav" id="4_3cb8i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pqoqj"]
 radius = 9.0
 height = 48.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf3lt"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtpp5"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfute"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pddpl"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eh33a"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl87d"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hy2s"]
+atlas = ExtResource("2_wteb5")
+region = Rect2(384, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_4njbv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_gsw1x")
+"texture": SubResource("AtlasTexture_qf3lt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_v60y7")
+"texture": SubResource("AtlasTexture_dtpp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfute")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pddpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eh33a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl87d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hy2s")
 }],
 "loop": true,
 "name": &"BasicMovement",
-"speed": 10.0
+"speed": 20.0
 }]
 
 [node name="Coleccionable1" type="Node2D" groups=["Coleccionable1"]]
@@ -39,6 +81,7 @@ position = Vector2(-1, -9)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4njbv")
 animation = &"BasicMovement"
+frame_progress = 0.848002
 speed_scale = 0.5
 
 [node name="CoinSound" type="AudioStreamPlayer2D" parent="."]

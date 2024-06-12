@@ -27,6 +27,7 @@ func _input(event):
 			Global.weapon_ammun -= 1
 			var newArmaArroj = arma_arroj.instantiate()
 			newArmaArroj.position = self.position
+			newArmaArroj.position = Vector2(position.x + 10, position.y + 20)
 			newArmaArroj.isFlip = movementSprite.flip_h
 			# Definimos orientacion del lanzamiento del arma arrojadiza
 			if newArmaArroj.isFlip:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dm185h3nxxd5j"]
 
 [ext_resource type="Script" path="res://Scripts/Municion_Pico.gd" id="1_ynibs"]
-[ext_resource type="Texture2D" uid="uid://teuecvvrmgbw" path="res://Sprites/Escenario/otros/puntos_esmeralda/sheet_pico_añadidot.png" id="2_jsh05"]
+[ext_resource type="Texture2D" uid="uid://teuecvvrmgbw" path="res://Sprites/Escenario/otros/picos_extra/sheet_pico_añadidot.png" id="2_jsh05"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0kd6"]
 radius = 25.318
