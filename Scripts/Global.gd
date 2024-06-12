@@ -12,9 +12,12 @@ func reducir_vida(cantidad):
 	# Evitamos que la vida sea negativa
 	if hp < 0:
 		hp = 0
-
+		
 func sumar_pts(pts):
 	points += pts
+	
+func sumar_hp(hps):
+	hp += hps	
 	
 func sumar_municion(munic):
 	weapon_ammun += munic

@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://tpxeh0g7cy4b"]
+
+[ext_resource type="Script" path="res://Scenes/Enviroment/hp_extra.gd" id="1_m0aio"]
+[ext_resource type="Texture2D" uid="uid://brkoi10rqeobr" path="res://Sprites/Escenario/otros/hp/extra_hp.png" id="1_ofv5e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fg0dv"]
+radius = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlevd"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eiwp3"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okxgu"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ve8a"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cy7po"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usgwn"]
+atlas = ExtResource("1_ofv5e")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2htl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlevd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eiwp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okxgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ve8a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cy7po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usgwn")
+}],
+"loop": true,
+"name": &"anim_hp",
+"speed": 5.0
+}]
+
+[node name="HpExtra" type="Node2D"]
+script = ExtResource("1_m0aio")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -8)
+shape = SubResource("CircleShape2D_fg0dv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 3
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_x2htl")
+animation = &"anim_hp"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

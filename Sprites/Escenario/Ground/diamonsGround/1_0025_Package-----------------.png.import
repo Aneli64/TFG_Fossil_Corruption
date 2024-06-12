@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci0xan0l08qwd"
-path="res://.godot/imported/image (1).png-47422c9e154ff20a6b41ee0e5bf9800d.ctex"
+uid="uid://cnbowfeengt0a"
+path="res://.godot/imported/1_0025_Package-----------------.png-19c500ba6ebc57925fa2771a86d41da0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Escenario/Ground/image (1).png"
-dest_files=["res://.godot/imported/image (1).png-47422c9e154ff20a6b41ee0e5bf9800d.ctex"]
+source_file="res://Sprites/Escenario/Ground/diamonsGround/1_0025_Package-----------------.png"
+dest_files=["res://.godot/imported/1_0025_Package-----------------.png-19c500ba6ebc57925fa2771a86d41da0.ctex"]
 
 [params]
 

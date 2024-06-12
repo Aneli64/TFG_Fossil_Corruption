@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://teuecvvrmgbw"
-path="res://.godot/imported/sheet_pico_añadidot.png-51c5908281c2a62b4170e2aa3d918412.ctex"
+uid="uid://m2ve3hbhmftc"
+path="res://.godot/imported/1_0017_Package-----------------.png-621356586042c60190de6d4bd59b7d99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Escenario/otros/sheet_pico_añadidot.png"
-dest_files=["res://.godot/imported/sheet_pico_añadidot.png-51c5908281c2a62b4170e2aa3d918412.ctex"]
+source_file="res://Sprites/Escenario/Ground/diamonsGround/1_0017_Package-----------------.png"
+dest_files=["res://.godot/imported/1_0017_Package-----------------.png-621356586042c60190de6d4bd59b7d99.ctex"]
 
 [params]
 

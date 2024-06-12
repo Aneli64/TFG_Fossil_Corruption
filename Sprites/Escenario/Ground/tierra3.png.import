@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdh6h55lwp3so"
-path="res://.godot/imported/pinchos.png-8ad5ebd21cc50255eed5e7236b3b360f.ctex"
+uid="uid://c42sdxfme7267"
+path="res://.godot/imported/tierra3.png-e45036b914d39f7e45c1fdb7d9e90083.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Escenario/otros/pinchos.png"
-dest_files=["res://.godot/imported/pinchos.png-8ad5ebd21cc50255eed5e7236b3b360f.ctex"]
+source_file="res://Sprites/Escenario/Ground/tierra3.png"
+dest_files=["res://.godot/imported/tierra3.png-e45036b914d39f7e45c1fdb7d9e90083.ctex"]
 
 [params]
 
