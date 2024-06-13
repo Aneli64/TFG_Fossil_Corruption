@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkb1nx6y753sf"
-path="res://.godot/imported/monticulo1.png-5377252076bd210d011579107d2cb35c.ctex"
+uid="uid://dylafeku21sdv"
+path="res://.godot/imported/cavernaLevel1.png-78a44a31b447bd5cdbcbeddb534e0f4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/monticulo1.png"
-dest_files=["res://.godot/imported/monticulo1.png-5377252076bd210d011579107d2cb35c.ctex"]
+source_file="res://Sprites/Escenario/fondo/cavernaLevel1.png"
+dest_files=["res://.godot/imported/cavernaLevel1.png-78a44a31b447bd5cdbcbeddb534e0f4f.ctex"]
 
 [params]
 

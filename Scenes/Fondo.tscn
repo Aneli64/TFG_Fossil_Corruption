@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6hs1g6mf4bk6"]
+
+[ext_resource type="Texture2D" uid="uid://dylafeku21sdv" path="res://Sprites/Escenario/fondo/cavernaLevel1.png" id="1_14mkq"]
+
+[node name="Fondo" type="ParallaxBackground"]
+
+[node name="FondoFrontMain" type="ParallaxLayer" parent="."]
+position = Vector2(24, 48)
+motion_mirroring = Vector2(544, 307)
+
+[node name="(a)caverns5View" type="Sprite2D" parent="FondoFrontMain"]
+position = Vector2(248, 108)
+scale = Vector2(0.141667, 0.144444)
+texture = ExtResource("1_14mkq")
+
+[node name="FondoFrontMain2" type="ParallaxLayer" parent="."]
+position = Vector2(24, 664)
+motion_mirroring = Vector2(544, 307)
+
+[node name="(a)caverns5View" type="Sprite2D" parent="FondoFrontMain2"]
+position = Vector2(248, 108)
+scale = Vector2(0.141667, 0.144444)
+texture = ExtResource("1_14mkq")
+
+[node name="FondoFrontMain3" type="ParallaxLayer" parent="."]
+position = Vector2(1112, 48)
+motion_mirroring = Vector2(544, 307)
+
+[node name="(a)caverns5View" type="Sprite2D" parent="FondoFrontMain3"]
+position = Vector2(248, 108)
+scale = Vector2(0.141667, 0.144444)
+texture = ExtResource("1_14mkq")
+
+[node name="FondoFrontMain4" type="ParallaxLayer" parent="."]
+position = Vector2(1112, 664)
+motion_mirroring = Vector2(544, 307)
+
+[node name="(a)caverns5View" type="Sprite2D" parent="FondoFrontMain4"]
+position = Vector2(248, 108)
+scale = Vector2(0.141667, 0.144444)
+texture = ExtResource("1_14mkq")

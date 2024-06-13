@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duqkx6fh0tk2"
-path="res://.godot/imported/bar_1.png-331773ca9a2d559c3bdb779190a43518.ctex"
+uid="uid://c8kv6cx0ysxjn"
+path="res://.godot/imported/cavernaLevel2.png-56bf1ddababd66b06abcadc4f0811291.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fonts/bar_1.png"
-dest_files=["res://.godot/imported/bar_1.png-331773ca9a2d559c3bdb779190a43518.ctex"]
+source_file="res://Sprites/Escenario/fondo/cavernaLevel2.png"
+dest_files=["res://.godot/imported/cavernaLevel2.png-56bf1ddababd66b06abcadc4f0811291.ctex"]
 
 [params]
 

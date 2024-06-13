@@ -1,5 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://djv7k3fcpm8la"]
 
+[ext_resource type="PackedScene" uid="uid://b6hs1g6mf4bk6" path="res://Scenes/Fondo.tscn" id="1_vvfku"]
 [ext_resource type="PackedScene" uid="uid://ch4uh853uuiwn" path="res://Scenes/Characters/Player.tscn" id="2_d5ui2"]
 [ext_resource type="PackedScene" uid="uid://djbwbkxhtodpo" path="res://Scenes/Characters/Player_HUD.tscn" id="3_7al77"]
 [ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Characters/Enemy.tscn" id="5_n8vgd"]
@@ -26,20 +27,14 @@ func _process(delta):
 		position = player.position 
 "
 
-[sub_resource type="BoxMesh" id="BoxMesh_nea6w"]
-
 [node name="MainScene" type="Node2D"]
 position = Vector2(2, 1)
 script = SubResource("GDScript_tddbd")
 
-[node name="fondo2" type="MeshInstance2D" parent="."]
-modulate = Color(0.207843, 0.192157, 0.0901961, 1)
-position = Vector2(3667, 4341)
-scale = Vector2(1e+06, 1e+06)
-mesh = SubResource("BoxMesh_nea6w")
+[node name="Fondo" parent="." instance=ExtResource("1_vvfku")]
 
 [node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-1562, -6)
+position = Vector2(-1351, 1274)
 scale = Vector2(1.18374, 1.40625)
 collision_mask = 12
 
