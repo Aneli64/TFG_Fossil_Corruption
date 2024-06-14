@@ -34,7 +34,7 @@ script = SubResource("GDScript_tddbd")
 [node name="Fondo" parent="." instance=ExtResource("1_vvfku")]
 
 [node name="PlayerBody" parent="." instance=ExtResource("2_d5ui2")]
-position = Vector2(-1351, 1274)
+position = Vector2(-1483, 4)
 scale = Vector2(1.18374, 1.40625)
 collision_mask = 12
 
@@ -121,19 +121,19 @@ position = Vector2(-362, 86)
 position = Vector2(-1042, 331)
 
 [node name="Pinchos2" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
-position = Vector2(139, -1)
+position = Vector2(140, 0)
 
 [node name="Pinchos3" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
-position = Vector2(72, -1)
+position = Vector2(69, -1)
 
 [node name="Pinchos5" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
-position = Vector2(205, -2)
+position = Vector2(208, -2)
 
 [node name="Pinchos6" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
 position = Vector2(275, -2)
 
 [node name="Pinchos7" parent="Trampas/Pinchos_LV1" instance=ExtResource("7_jhjjm")]
-position = Vector2(323, -3)
+position = Vector2(343, -2)
 
 [node name="Pinchos_LV2" parent="Trampas" instance=ExtResource("7_jhjjm")]
 position = Vector2(52, 901)
@@ -153,34 +153,34 @@ position = Vector2(147, 0)
 position = Vector2(74, 0)
 
 [node name="Pinchos5" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(251, 0)
+position = Vector2(258, 1)
 
 [node name="Pinchos14" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
 position = Vector2(191, -1)
 
 [node name="Pinchos4" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-211, 0)
+position = Vector2(-210, 5)
 
 [node name="Pinchos6" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-274, 1)
+position = Vector2(-278, 6)
 
 [node name="Pinchos7" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-343, 3)
+position = Vector2(-347, 4)
 
 [node name="Pinchos13" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-417, 3)
+position = Vector2(-416, 4)
 
 [node name="Pinchos8" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-780, 60)
+position = Vector2(-780, 59)
 
 [node name="Pinchos9" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-842, 60)
+position = Vector2(-850, 61)
 
 [node name="Pinchos10" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-1219, 59)
+position = Vector2(-1232, 59)
 
 [node name="Pinchos11" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
-position = Vector2(-1182, 58)
+position = Vector2(-1162, 59)
 
 [node name="Pinchos12" parent="Trampas/Pinchos_LV2" instance=ExtResource("7_jhjjm")]
 position = Vector2(-77, -158)

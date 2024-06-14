@@ -181,7 +181,6 @@ atlas = ExtResource("10_lerni")
 region = Rect2(575, 0, 115, 105)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_llwck"]
-load_path = "res://.godot/imported/spawn_player.png-e50fd4d549572aca89cb5c85355ecc02.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cspvs"]
 atlas = SubResource("CompressedTexture2D_llwck")
