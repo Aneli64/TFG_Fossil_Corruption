@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xni03ebe7q4v"
-path="res://.godot/imported/Wings-1-removebg-preview.png-2e93012bb8428c73be35f7d6f61d2268.ctex"
+uid="uid://cg6epgwaut568"
+path="res://.godot/imported/Wings-4-removebg-preview.png-852db47891e6b4683d738035c16e4cd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_1/Wings-1-removebg-preview.png"
-dest_files=["res://.godot/imported/Wings-1-removebg-preview.png-2e93012bb8428c73be35f7d6f61d2268.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_1/Wings-4-removebg-preview.png"
+dest_files=["res://.godot/imported/Wings-4-removebg-preview.png-852db47891e6b4683d738035c16e4cd2.ctex"]
 
 [params]
 

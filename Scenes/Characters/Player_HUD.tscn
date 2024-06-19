@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djbwbkxhtodpo"]
 
-[ext_resource type="Script" path="res://Scripts/HUD.gd" id="1_6lmle"]
+[ext_resource type="Script" path="res://Scripts/HUD/HUD.gd" id="1_6lmle"]
 [ext_resource type="Texture2D" uid="uid://cmpksqlbyipkk" path="res://Sprites/Player/icono_life_personaje.png" id="2_bka7b"]
 [ext_resource type="FontFile" uid="uid://cccwp32mtyb3a" path="res://Fonts/Squares.ttf" id="2_vl8sk"]
 [ext_resource type="Texture2D" uid="uid://b4f7ncikh5fid" path="res://Sprites/Player/pico_arrojadizo.png" id="3_0fgd6"]

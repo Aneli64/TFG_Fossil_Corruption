@@ -17,6 +17,7 @@ func sumar_pts(pts):
 	points += pts
 	
 func sumar_hp(hps):
+	# Evitamos que la vida sea mayor a la permitida
 	if (hp + hps) < 100:
 		hp += hps
 	else:

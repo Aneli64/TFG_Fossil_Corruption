@@ -86,7 +86,6 @@ func choose_animation():
 			movementSprite.play("saltar")
 		else:
 			movementSprite.stop()
-		
 	else:
 		movementSprite.play("muerte")
 		died = true

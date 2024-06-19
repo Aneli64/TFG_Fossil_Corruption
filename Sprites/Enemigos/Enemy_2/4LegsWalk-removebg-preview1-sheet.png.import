@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bt4tbj7krsouy"
-path="res://.godot/imported/4LegsWalk-removebg-preview1-sheet.png-71b344d20a4c19712b31a3e5d01c9300.ctex"
+path="res://.godot/imported/4LegsWalk-removebg-preview1-sheet.png-907336e756c5b52557758f7ffa1760a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_2/4LegsWalk-removebg-preview1-sheet.png"
-dest_files=["res://.godot/imported/4LegsWalk-removebg-preview1-sheet.png-71b344d20a4c19712b31a3e5d01c9300.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_2/4LegsWalk-removebg-preview1-sheet.png"
+dest_files=["res://.godot/imported/4LegsWalk-removebg-preview1-sheet.png-907336e756c5b52557758f7ffa1760a0.ctex"]
 
 [params]
 

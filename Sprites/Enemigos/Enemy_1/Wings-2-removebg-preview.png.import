@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clciky326eejr"
-path="res://.godot/imported/infernal_horse_hit.png-48dad7038c7448f2d42da2e8be355175.ctex"
+uid="uid://cmv0t2ei1i33g"
+path="res://.godot/imported/Wings-2-removebg-preview.png-80d736fa351b5c3106aacc95a252b7de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_2/infernal_horse_hit.png"
-dest_files=["res://.godot/imported/infernal_horse_hit.png-48dad7038c7448f2d42da2e8be355175.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_1/Wings-2-removebg-preview.png"
+dest_files=["res://.godot/imported/Wings-2-removebg-preview.png-80d736fa351b5c3106aacc95a252b7de.ctex"]
 
 [params]
 

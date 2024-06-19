@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp1gp34imj3l1"
-path="res://.godot/imported/animacion_golpe_batt.png-d253de2f52712e600409554504c4c04b.ctex"
+uid="uid://dolxtmhctcyhs"
+path="res://.godot/imported/muerte_bat.png-981792108646bb330c8ed32ce147cf07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_1/animacion_golpe_batt.png"
-dest_files=["res://.godot/imported/animacion_golpe_batt.png-d253de2f52712e600409554504c4c04b.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_1/muerte_bat.png"
+dest_files=["res://.godot/imported/muerte_bat.png-981792108646bb330c8ed32ce147cf07.ctex"]
 
 [params]
 

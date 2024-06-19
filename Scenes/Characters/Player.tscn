@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=3 uid="uid://ch4uh853uuiwn"]
 
-[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_ya6y8"]
+[ext_resource type="Script" path="res://Scripts/movilidad_personajes/PlayerController.gd" id="1_ya6y8"]
 [ext_resource type="PackedScene" uid="uid://cqvd8cecpod46" path="res://Scenes/Enviroment/Arma_arroj.tscn" id="2_166km"]
 [ext_resource type="Texture2D" uid="uid://cpdi0hkhqhuqt" path="res://Sprites/Player/Caminar_Personaje.png" id="2_jl5iq"]
 [ext_resource type="Texture2D" uid="uid://dqtp5xcvexys3" path="res://Sprites/Player/Muerte_Personaje.png" id="3_44pmb"]

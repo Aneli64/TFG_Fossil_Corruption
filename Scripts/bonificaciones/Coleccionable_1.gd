@@ -3,7 +3,7 @@ extends Node2D
 @onready var movementSprite = $AnimatedSprite2D
 @onready var ptsSound = $CoinSound
 
-# Called when the node enters the scene tree for the first time.
+# Iniciamos el sprite básico de movimiento
 func _ready():
 	movementSprite.play("BasicMovement")
 

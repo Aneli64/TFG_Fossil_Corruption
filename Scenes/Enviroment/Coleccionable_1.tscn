@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://re684wl5yohx"]
 
-[ext_resource type="Script" path="res://Scripts/Coleccionable_1.gd" id="1_oy3r6"]
+[ext_resource type="Script" path="res://Scripts/bonificaciones/Coleccionable_1.gd" id="1_oy3r6"]
 [ext_resource type="Texture2D" uid="uid://ccoin1nsdbpcs" path="res://Sprites/Escenario/otros/puntos_esmeralda/esmeralda-sheet.png" id="2_wteb5"]
 [ext_resource type="AudioStream" uid="uid://b0qej50cgm7ac" path="res://Sounds/coin.wav" id="4_3cb8i"]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8kv6cx0ysxjn"
-path="res://.godot/imported/cavernaLevel2.png-56bf1ddababd66b06abcadc4f0811291.ctex"
+uid="uid://dtgnbrrjbvpxj"
+path="res://.godot/imported/Wings-3-removebg-preview.png-14694cd5feb1ef50be5ecc4ebec6d807.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Escenario/fondo/cavernaLevel2.png"
-dest_files=["res://.godot/imported/cavernaLevel2.png-56bf1ddababd66b06abcadc4f0811291.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_1/Wings-3-removebg-preview.png"
+dest_files=["res://.godot/imported/Wings-3-removebg-preview.png-14694cd5feb1ef50be5ecc4ebec6d807.ctex"]
 
 [params]
 

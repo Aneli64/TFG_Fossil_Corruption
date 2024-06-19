@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg6epgwaut568"
-path="res://.godot/imported/Wings-4-removebg-preview.png-f11b06ff9420044fafa572e7cf0b37c9.ctex"
+uid="uid://h2dl7jwtcrfn"
+path="res://.godot/imported/infernal_horse_deep.png-a16516593e7b2020e54bd0312125ccc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_1/Wings-4-removebg-preview.png"
-dest_files=["res://.godot/imported/Wings-4-removebg-preview.png-f11b06ff9420044fafa572e7cf0b37c9.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_2/infernal_horse_deep.png"
+dest_files=["res://.godot/imported/infernal_horse_deep.png-a16516593e7b2020e54bd0312125ccc3.ctex"]
 
 [params]
 

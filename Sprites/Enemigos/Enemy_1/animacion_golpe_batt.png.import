@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tfg72qoi0c1y"
-path="res://.godot/imported/Wings-5-removebg-preview.png-7595811fd2ca0dd5d61ac80c26d0cbcb.ctex"
+uid="uid://bp1gp34imj3l1"
+path="res://.godot/imported/animacion_golpe_batt.png-d94f8eed545573b87f4350af0b059ff0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_1/Wings-5-removebg-preview.png"
-dest_files=["res://.godot/imported/Wings-5-removebg-preview.png-7595811fd2ca0dd5d61ac80c26d0cbcb.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_1/animacion_golpe_batt.png"
+dest_files=["res://.godot/imported/animacion_golpe_batt.png-d94f8eed545573b87f4350af0b059ff0.ctex"]
 
 [params]
 

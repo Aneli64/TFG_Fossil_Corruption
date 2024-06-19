@@ -1,11 +1,11 @@
 [gd_scene load_steps=29 format=3 uid="uid://bfh8jrpfims4j"]
 
-[ext_resource type="Texture2D" uid="uid://bt4tbj7krsouy" path="res://Sprites/Final_Enemy/Enemy_2/4LegsWalk-removebg-preview1-sheet.png" id="1_0qr4g"]
-[ext_resource type="Script" path="res://Scripts/Enemy_2.gd" id="1_uppoj"]
-[ext_resource type="Texture2D" uid="uid://h2dl7jwtcrfn" path="res://Sprites/Final_Enemy/Enemy_2/infernal_horse_deep.png" id="3_8uq4h"]
+[ext_resource type="Texture2D" uid="uid://bt4tbj7krsouy" path="res://Sprites/Enemigos/Enemy_2/4LegsWalk-removebg-preview1-sheet.png" id="1_0qr4g"]
+[ext_resource type="Script" path="res://Scripts/movilidad_personajes/Enemy_2.gd" id="1_uppoj"]
+[ext_resource type="Texture2D" uid="uid://h2dl7jwtcrfn" path="res://Sprites/Enemigos/Enemy_2/infernal_horse_deep.png" id="3_8uq4h"]
 [ext_resource type="PackedScene" uid="uid://cueffd51ivwpu" path="res://Scenes/Characters/Enemy_HUD_2.tscn" id="3_a180j"]
-[ext_resource type="Texture2D" uid="uid://clciky326eejr" path="res://Sprites/Final_Enemy/Enemy_2/infernal_horse_hit.png" id="3_o8fx0"]
-[ext_resource type="Script" path="res://Scripts/Enemy_HUD_2.gd" id="4_3yjn3"]
+[ext_resource type="Texture2D" uid="uid://clciky326eejr" path="res://Sprites/Enemigos/Enemy_2/infernal_horse_hit.png" id="3_o8fx0"]
+[ext_resource type="Script" path="res://Scripts/HUD/Enemy_HUD_2.gd" id="4_3yjn3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vaj1n"]
 atlas = ExtResource("1_0qr4g")

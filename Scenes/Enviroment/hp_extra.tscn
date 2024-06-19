@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://tpxeh0g7cy4b"]
 
-[ext_resource type="Script" path="res://Scripts/hp_extra.gd" id="1_m0aio"]
+[ext_resource type="Script" path="res://Scripts/bonificaciones/hp_extra.gd" id="1_m0aio"]
 [ext_resource type="Texture2D" uid="uid://brkoi10rqeobr" path="res://Sprites/Escenario/otros/hp/extra_hp.png" id="1_ofv5e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fg0dv"]

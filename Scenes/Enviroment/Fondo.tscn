@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6hs1g6mf4bk6"]
+
+[ext_resource type="Texture2D" uid="uid://dylafeku21sdv" path="res://Sprites/Escenario/fondo/cavernaLevel1.png" id="1_14mkq"]
+
+[node name="Fondo" type="ParallaxBackground"]
+
+[node name="FondoCaverna" type="ParallaxLayer" parent="."]
+position = Vector2(24, 48)
+motion_mirroring = Vector2(1920, 1080)
+
+[node name="cavernaSprite" type="Sprite2D" parent="FondoCaverna"]
+position = Vector2(936, 492)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_14mkq")

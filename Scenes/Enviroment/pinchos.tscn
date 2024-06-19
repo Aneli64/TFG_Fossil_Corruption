@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bykcia20b0wkd"]
 
-[ext_resource type="Script" path="res://Scripts/pinchos.gd" id="1_26oww"]
+[ext_resource type="Script" path="res://Scripts/gameplay_elements/pinchos.gd" id="1_26oww"]
 [ext_resource type="Texture2D" uid="uid://bdh6h55lwp3so" path="res://Sprites/Escenario/otros/trampa/pinchos.png" id="1_vwbft"]
 
 [node name="Pinchos" type="Node2D" groups=["DañoLetal1"]]

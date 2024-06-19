@@ -1,8 +1,6 @@
 extends Node2D
 
 var velocity = Vector2(400,40)
-#var gravity = 9.8
-
 var isFlip = false
 
 func ready():
@@ -10,9 +8,7 @@ func ready():
 		velocity.x *= -1
 
 func _process(delta):
-	#velocity.y += gravity
 	position += velocity * delta
-
 
 func _on_hitbox_body_entered(body):
 	velocity = Vector2(0,0)

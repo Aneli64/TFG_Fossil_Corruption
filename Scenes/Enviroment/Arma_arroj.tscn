@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cqvd8cecpod46"]
 
-[ext_resource type="Script" path="res://Scripts/Arma_arroj.gd" id="1_lq018"]
+[ext_resource type="Script" path="res://Scripts/gameplay_elements/Arma_arroj.gd" id="1_lq018"]
 [ext_resource type="Texture2D" uid="uid://cxljqew4wgb3a" path="res://Sprites/Player/pico_arrojadizo-sheet.png" id="2_p42pq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trj1g"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h2dl7jwtcrfn"
-path="res://.godot/imported/infernal_horse_deep.png-c9cc5bb2eff68f051932973404b9288c.ctex"
+uid="uid://clciky326eejr"
+path="res://.godot/imported/infernal_horse_hit.png-0b0702f77663ad67490dab610f47d72f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Final_Enemy/Enemy_2/infernal_horse_deep.png"
-dest_files=["res://.godot/imported/infernal_horse_deep.png-c9cc5bb2eff68f051932973404b9288c.ctex"]
+source_file="res://Sprites/Enemigos/Enemy_2/infernal_horse_hit.png"
+dest_files=["res://.godot/imported/infernal_horse_hit.png-0b0702f77663ad67490dab610f47d72f.ctex"]
 
 [params]
 
