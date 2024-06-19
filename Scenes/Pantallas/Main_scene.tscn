@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://djv7k3fcpm8la"]
+[gd_scene load_steps=15 format=3 uid="uid://djv7k3fcpm8la"]
 
 [ext_resource type="PackedScene" uid="uid://b6hs1g6mf4bk6" path="res://Scenes/Enviroment/Fondo.tscn" id="1_yy5hh"]
 [ext_resource type="PackedScene" uid="uid://ch4uh853uuiwn" path="res://Scenes/Characters/Player.tscn" id="2_ktst7"]
 [ext_resource type="PackedScene" uid="uid://djbwbkxhtodpo" path="res://Scenes/Characters/Player_HUD.tscn" id="3_01ce3"]
+[ext_resource type="PackedScene" uid="uid://6slkxa3s43oo" path="res://Scenes/Pantallas/PausaMenu.tscn" id="3_f2l14"]
 [ext_resource type="PackedScene" uid="uid://dm5n1anmjh7t4" path="res://Scenes/Global.tscn" id="4_l0j62"]
 [ext_resource type="PackedScene" uid="uid://duxrb47qwrxwl" path="res://Scenes/Characters/Enemy.tscn" id="5_h18r6"]
 [ext_resource type="PackedScene" uid="uid://bfh8jrpfims4j" path="res://Scenes/Characters/Enemy_2.tscn" id="6_im0cc"]
@@ -41,6 +42,8 @@ script = SubResource("GDScript_tddbd")
 position = Vector2(-1520, 11)
 scale = Vector2(1.18374, 1.40625)
 collision_mask = 12
+
+[node name="PausaMenu" parent="." instance=ExtResource("3_f2l14")]
 
 [node name="Hud" parent="." instance=ExtResource("3_01ce3")]
 

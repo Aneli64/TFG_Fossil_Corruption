@@ -17,17 +17,17 @@ grow_vertical = 2
 script = ExtResource("1_20eju")
 
 [node name="F1Ca6Cbb-5b92-45e1-895f-2162b830d0b3-photoroom" type="Sprite2D" parent="."]
-position = Vector2(575, 433.5)
-scale = Vector2(1.12891, 0.844727)
+position = Vector2(985, 580)
+scale = Vector2(2.38772, 1.77099)
 texture = ExtResource("2_lxpsv")
 
 [node name="exit_btn" type="Button" parent="."]
 texture_filter = 3
 layout_mode = 2
-offset_left = 634.0
-offset_top = 419.0
-offset_right = 934.0
-offset_bottom = 710.0
+offset_left = 1206.0
+offset_top = 577.0
+offset_right = 1506.0
+offset_bottom = 868.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 60
@@ -38,10 +38,10 @@ expand_icon = true
 [node name="play_btn" type="Button" parent="."]
 texture_filter = 3
 layout_mode = 2
-offset_left = 251.0
-offset_top = 409.0
-offset_right = 601.0
-offset_bottom = 705.0
+offset_left = 471.0
+offset_top = 569.0
+offset_right = 821.0
+offset_bottom = 865.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 60
@@ -65,7 +65,7 @@ alignment = 1
 
 [node name="LogoJuego-sheet" type="Sprite2D" parent="."]
 texture_filter = 5
-position = Vector2(584, 343)
+position = Vector2(952, 407)
 scale = Vector2(29.0156, 24.0234)
 texture = ExtResource("3_4d7i2")
 
@@ -75,3 +75,4 @@ autoplay = true
 
 [connection signal="pressed" from="exit_btn" to="." method="_on_exit_btn_pressed"]
 [connection signal="pressed" from="play_btn" to="." method="_on_play_btn_pressed"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
